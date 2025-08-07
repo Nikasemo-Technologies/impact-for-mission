@@ -1,0 +1,87 @@
+.aboutSec {
+    padding: 40px;
+}
+
+.welc-title {
+    color: #0046b0;
+    text-align: center;
+    font-family: "DM Serif Text", serif;
+}
+
+.welc-title-1 {
+  color: #0046b0;
+  text-align: center;
+  font-family: "DM Serif Text", serif;
+}
+
+.welc-descrip {
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.hmj-title {
+    color: #0046b0;
+    font-size: 20px;
+    font-family: "DM Serif Text", serif;
+}
+
+.hmj-descrip {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.hmj-link {
+    font-size: 14px;
+}
+
+.homesectCap {
+    font-family: "DM Serif Text", serif;
+    font-size: 55px;
+    color: #0046b0;
+  }
+
+  .homesectCapWhite {
+    font-family: "DM Serif Text", serif;
+    font-size: 55px;
+    color: #ffffff;
+  }
+
+  .servicesholder {
+    border: 1px solid #cfcfcf;
+    border-radius: 7px;
+    margin-bottom: 20px;
+  }
+
+  .servicesholder:hover {
+    border: 1px solid #cfcfcf;
+    border-radius: 7px;
+    box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+-webkit-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+-moz-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+  }
+
+  .ourPrograms {
+    margin-top: 30px;
+    padding: 40px;
+    background-color: #0046b0;
+  }
+
+  .programHold {
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    width: 100%;
+    color: #ffffff;
+  }
+
+  .c-pt {
+    font-family: "DM Serif Text", serif;
+  }
+
+  .c-ptt {
+    font-family: "DM Serif Text", serif;
+  }

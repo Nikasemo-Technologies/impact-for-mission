@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact For Mission</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="app.js"></script>
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #e3e3e3;
+            padding: 15px 20px;
+        }
+        .navbar-brand {
+            color: #0d6efd;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .logout-btn {
+            color: #333;
+            text-decoration: none;
+        }
+        .welcome-section {
+            background-color: #ccc;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .welcome-section h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .section-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+            padding: 15px;
+            height: 100%;
+        }
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .registration-card {
+            background-color: white;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .live-badge {
+            background-color: #dc3545;
+            color: white;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        .daily-impact-btn {
+            background-color: #0d6efd;
+            color: white;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        .info-line {
+            margin-bottom: 5px;
+        }
+        .info-line strong {
+            display: inline-block;
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar justify-content-between">
+        <a class="navbar-brand" href="#">IMPACT FOR MISSION</a>
+        <a class="logout-btn" href="#">Logout</a>
+    </nav>
+
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="welcome-section">
+                    <h2>Hello</h2>
+                    <p>Access all emails from all registrations.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="w-100">
+                    <h5>Title</h5>
+                    <p id="live-description">Lorem ipsum dolor sit amet</p>
+                    <a href="#" id="live-link" target="_blank" style="text-decoration: none;"><span class="live-badge">● Live</span></a>
+                    <div class="text-end mt-3">
+                        <button class="daily-impact-btn" data-bs-toggle="modal" data-bs-target="#dailyImpactModal">Daily Impact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="row g-4">
+            <!-- Memberships Section -->
+            <div class="col-md-3">
+                <div class="section-card">
+                    <h3 class="section-title">Meberships</h3>
+                    <div id="memberships-list">
+                        <!-- Memberships items will be loaded here -->
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Train Up A Child Section -->
+            <div class="col-md-3">
+                <div class="section-card">
+                    <h3 class="section-title">Train Up A Child</h3>
+                    <div id="train-up-child-list">
+                        <!-- Train Up items will be loaded here -->
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moral Injury Section -->
+            <div class="col-md-3">
+                <div class="section-card">
+                    <h3 class="section-title">Moral Injury</h3>
+                    <div id="moral-injury-list">
+                        <!-- Moral Injury items will be loaded here -->
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Holistic Health Section -->
+            <div class="col-md-3">
+                <div class="section-card">
+                    <h3 class="section-title">Holistic Health</h3>
+                    <div id="holistic-health-list">
+                        <!-- Holistic Health items will be loaded here -->
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Impact Modal -->
+    <div class="modal fade" id="dailyImpactModal" tabindex="-1" aria-labelledby="dailyImpactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dailyImpactModalLabel">Update Daily Impact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="dailyImpactForm">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Link</label>
+                            <input type="text" class="form-control" id="link">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase configuration - Replace with your Firebase config
+        const firebaseConfig = {
+        apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
+        authDomain: "impact-for-missions.firebaseapp.com",
+        projectId: "impact-for-missions",
+        storageBucket: "impact-for-missions.firebasestorage.app",
+        messagingSenderId: "178209392285",
+        appId: "1:178209392285:web:537eae20dc70845dc6f674",
+        measurementId: "G-S1G45WKR67"
+      };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Live Document ID
+        const liveDocId = "y20TwFrk2rbfVkZ7aEYW";
+
+        // Load Live Document
+        function loadLiveDoc() {
+            db.collection("live").doc(liveDocId).get().then((doc) => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    document.getElementById("live-description").textContent = data.description || "No description available";
+                    document.getElementById("title").value = data.title || "";
+                    document.getElementById("description").value = data.description || "";
+                    document.getElementById("link").value = data.link || "";
+                    
+                    // Set the link for the Live badge
+                    const liveLink = document.getElementById("live-link");
+                    if (data.link && data.link.trim() !== '') {
+                        liveLink.href = data.link;
+                    } else {
+                        liveLink.href = "#";
+                    }
+                } else {
+                    console.log("No such document!");
+                }
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+            });
+        }
+
+        // Load Registrations by Type
+        function loadRegistrationsByType(type, collectionId) {
+            let query;
+            switch(type) {
+                case 'membership':
+                    query = db.collection("leads").where("type", "==", "membership");
+                    break;
+                case 'train-up-child':
+                    query = db.collection("leads").where("type", "==", "events-train-up-a-child");
+                    break;
+                case 'moral-injury':
+                    query = db.collection("leads").where("type", "==", "events-moralinjury");
+                    break;
+                case 'holistic-health':
+                    query = db.collection("leads").where("type", "==", "events-wholehealth");
+                    break;
+                default:
+                    console.log("Invalid type");
+                    return;
+            }
+
+            query.get().then((querySnapshot) => {
+                const container = document.getElementById(collectionId);
+                container.innerHTML = '';
+
+                if (querySnapshot.empty) {
+                    container.innerHTML = '<p class="text-center">No registrations found</p>';
+                    return;
+                }
+
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    console.log(doc.data().phonenumber);
+                    const card = document.createElement('div');
+                    card.classList.add('registration-card');
+
+                    // Create registration info
+                    let cardContent = `
+                        <div class="info-line"><strong>Fullname:</strong> ${data.fullname || 'N/A'}</div>
+                        <div class="info-line"><strong>Phone Number:</strong> ${data.phonenumber || 'N/A'}</div>
+                        <div class="info-line"><strong>Email:</strong> ${data.email || 'N/A'}</div>
+                        <div class="info-line"><strong>Age Group:</strong> ${data.ageGroup || '18-25'}</div>
+                    `;
+
+                    // Add program name for memberships
+                    if (type === 'membership' && data.progName) {
+                        cardContent += `<div class="info-line"><strong>Interest:</strong> ${data.progName || 'Counseling'}</div>`;
+                    } else if (type === 'train-up-child' || type === 'moral-injury' || type === 'holistic-health') {
+                        cardContent += `<div class="info-line"><strong>Program Schedule:</strong> ${data.progSched || 'Counseling'}</div>`;
+                    }
+
+                    card.innerHTML = cardContent;
+                    container.appendChild(card);
+                });
+            }).catch((error) => {
+                console.log("Error getting documents:", error);
+                document.getElementById(collectionId).innerHTML = 
+                    '<p class="text-center text-danger">Error loading data</p>';
+            });
+        }
+
+        // Save Daily Impact Changes
+        document.getElementById("saveChangesBtn").addEventListener("click", function() {
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const link = document.getElementById("link").value;
+
+            // Basic validation
+            if (!title || !description) {
+                alert("Title and Description are required!");
+                return;
+            }
+
+            // Update firestore document
+            db.collection("live").doc(liveDocId).update({
+                title: title,
+                description: description,
+                link: link,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            .then(() => {
+                // Close modal and update UI
+                document.getElementById("live-description").textContent = description;
+                const modal = bootstrap.Modal.getInstance(document.getElementById('dailyImpactModal'));
+                modal.hide();
+                
+                // Show success message
+                alert("Daily impact updated successfully!");
+            })
+            .catch((error) => {
+                console.error("Error updating document: ", error);
+                alert("Error updating document: " + error.message);
+            });
+        });
+
+        // Initialize dashboard data on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load live document
+            loadLiveDoc();
+            
+            // Load registrations for each section
+            loadRegistrationsByType('membership', 'memberships-list');
+            loadRegistrationsByType('train-up-child', 'train-up-child-list');
+            loadRegistrationsByType('moral-injury', 'moral-injury-list');
+            loadRegistrationsByType('holistic-health', 'holistic-health-list');
+        });
+    </script>
+</body>
+</html>

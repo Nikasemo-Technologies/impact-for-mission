@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Christian Therapeutic Ministry</title>
+    <link
+    href="home.css"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!--  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.css"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
+        authDomain: "impact-for-missions.firebaseapp.com",
+        projectId: "impact-for-missions",
+        storageBucket: "impact-for-missions.firebasestorage.app",
+        messagingSenderId: "178209392285",
+        appId: "1:178209392285:web:537eae20dc70845dc6f674",
+        measurementId: "G-S1G45WKR67"
+      };
+
+        // Initialize Firebase
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Now you can access Firebase services
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+        const analytics = firebase.analytics();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+
+    <style type="text/css">
+      .navbackground {
+        background: rgba(255, 255, 255, 1);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+        -moz-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+      }
+
+      .blurred-background {
+        background: rgba(255, 255, 255, 1); /* Adjust color and opacity as needed */
+        
+      }
+
+      .navbar-brand1 {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+      }
+
+      .navbar-light .navbar-brand1 {
+        font-weight: 700;
+        font-family: "Muli", sans-serif;
+      }
+
+      .navbar-scroll {
+        color: #000;
+        font-weight: 700;
+        font-family: "Muli", sans-serif;
+      }
+
+      /* .navbar-light .navbar-brand:focus,
+      .navbar-light .navbar-brand:hover {
+        color: white;
+      }
+
+      .navbar-light .navbar-scroll:focus,
+      .navbar-light .navbar-scroll:hover {
+        color: #343a40;
+      } */
+
+      .navbar-light .navbar-nav .nav-link {
+        color: #0046b0;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        transition: background-color 0.5s ease-in-out;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out;
+        border-bottom: 4px solid transparent;
+      }
+
+      .navlinkscroll {
+        color: #343a40;
+      }
+
+      .navbar-light .navbar-nav .nav-link:focus {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+        /*border-bottom-color:#f17100;*/
+      }
+
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+      }
+
+      .navbar-light .navbar-nav .nav-link.disabled {
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-light .navbar-nav .show > .nav-link,
+      .navbar-light .navbar-nav .active > .nav-link,
+      .navbar-light .navbar-nav .nav-link.show,
+      .navbar-light .navbar-nav .nav-link.active {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+      }
+
+      .navbar-toggler {
+        border: none;
+        background: transparent !important;
+      }
+      .navbar-toggler:hover {
+        background: transparent !important;
+      }
+      .navbar-toggler .icon-bar {
+        display: block;
+        background-color: #0046b0;
+        width: 26px;
+        height: 2px;
+        transition: all 0.2s;
+      }
+      .navbar-toggler .icon-bar + .icon-bar {
+        margin-top: 5px;
+      }
+      .navbar-toggler .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .navbar-toggler .middle-bar {
+        opacity: 0;
+      }
+      .navbar-toggler .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+      .navbar-toggler.collapsed .top-bar {
+        transform: rotate(0);
+      }
+      .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+      }
+      .navbar-toggler.collapsed .bottom-bar {
+        transform: rotate(0);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 1rem 0 0;
+        font-size: 14px;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 1);
+        background-clip: padding-box;
+        border-radius: 0rem;
+      }
+
+      .dropdown-divider {
+        height: 0;
+        margin: 0.5rem 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+      }
+
+      .dropdown-item {
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding: 1.25rem 1.5rem;
+        clear: both;
+        color: #000000;
+        font-weight: 300;
+        text-align: inherit;
+        white-space: nowrap;
+        background: none;
+        border: 0;
+      }
+
+      .dropdown-item:focus,
+      .dropdown-item:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #1b1464;
+        font-weight: 500;
+      }
+
+      .dropdown-item.active,
+      .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e08d1e;
+      }
+
+      .dropdown-item.disabled,
+      .dropdown-item:disabled {
+        color: #f5b822;
+        background-color: transparent;
+      }
+
+      .apppartner {
+        background-color: #ffb900;
+        color: #0b1936;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+      }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .fht {
+          margin-top: 30px;
+        }
+      }
+    </style>
+
+    <style>
+      /* Add this CSS to style the carousel indicators */
+      .carousel {
+        position: relative; /* Ensure the carousel is the positioning context */
+      }
+
+      .carousel-indicators {
+        position: absolute; /* Position indicators absolutely within the carousel */
+        left: 1100px; /* Adjust the right position as needed */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        display: flex;
+        flex-direction: column; /* Make indicators vertical */
+        z-index: 1000; /* Ensure indicators are on top */
+      }
+
+      .carousel-indicators li {
+        margin: 5px 0; /* Space between indicators */
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+        border-radius: 50%; /* Make them circular */
+        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
+      }
+
+      .carousel-indicators .active {
+        background-color: #ffffff; /* Active indicator color */
+      }
+
+      .carousel-control-prev,
+.carousel-control-next {
+    top: auto;
+    bottom: 0;
+          width: 50px;
+          height: 50px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+      }
+
+      .carousel-control-prev {
+          left: 20px;
+          bottom: 30px;
+      }
+
+      .carousel-control-next {
+          left: 80px;
+          bottom: 30px;
+      }
+
+      /* Optional: Adjust icon position within the button */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          width: 20px;
+          height: 20px;
+      }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .carousel-indicators {
+        position: absolute; /* Position indicators absolutely within the carousel */
+        left: -40px; /* Adjust the right position as needed */
+        top: 50%; /* Center vertically */
+        display: none;
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        display: flex;
+        flex-direction: column; /* Make indicators vertical */
+        z-index: 1000; /* Ensure indicators are on top */
+      }
+
+      .carousel-indicators li {
+        margin: 5px 0; /* Space between indicators */
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+        border-radius: 50%; /* Make them circular */
+        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
+      }
+
+      .carousel-indicators .active {
+        background-color: #ffffff; /* Active indicator color */
+      }
+      }
+    </style>
+  </head>
+
+  <body style="font-family: 'Roboto', serif;">
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top navbackground dottt"
+      style="z-index: 99"
+    >
+      <div class="container navbodyhold" style="">
+        <a
+          class="navbar-brand1"
+          href="index.html"
+          style="color: #0047ab; font-family: 'Montserrat', sans-serif; text-align: center;"
+        >
+          <img
+            src="ctmlogo1.png"
+            class="img-fluid"
+            width="250px"
+            style="margin-right: 5px; margin-bottom: -7px;"
+          />
+         
+        </a>
+        <button
+          onclick="addNavBackground()"
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            
+
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                aria-haspopup="true" id="ourservices" aria-expanded="false">
+                ABOUT US
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="ourvision.html">VISION</a>
+                <a class="dropdown-item" href="who-we-serve.html">WHO WE SERVE</a>
+                <a class="dropdown-item" href="ourdirectors.html">DIRECTORS</a>
+              </div>
+            </li>
+          
+
+            <li class="nav-item">
+              <a class="nav-link" href="programs.html"
+                >OUR PROGRAMS
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="membership.html">
+                MEMBERSHIP
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="#!">
+                DONATE
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="blog.html">
+                BLOG
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="faqs.html">
+                FAQS
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="contactus.html">
+                CONTACT US
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://web.facebook.com/profile.php?id=61571194774764" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/@ChristianTherapeuticMinistry-I" target="blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style type="text/css">
+      .homeslider {
+        margin-top: 0px;
+      }
+
+      .carousel {
+        position: relative;
+        top: 0px;
+      }
+
+      .acttextbig {
+        color: white;
+        margin-top: 0px;
+        font-weight: 600;
+        font-size: 55px;
+        text-align: left;
+        font-family: "DM Serif Text", serif;
+      }
+
+      .homeheadbigtext {
+        color: #6a2f1e;
+        margin-top: 0px;
+        font-weight: 500;
+        font-size: 40px;
+        text-align: left;
+      }
+
+      .holderservices {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #F2F2F2;
+      }
+
+      .homesect1 {
+        padding: 60px;
+        background-color: #ffffff;
+      }
+
+      .carousel-item {
+        min-height: 700px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .carousel-inner {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 5%;
+        bottom: 100px;
+        left: 15%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: right;
+        color: #fff;
+        text-align: center;
+      }
+
+      .capttxt {
+        color: #ffffff;
+        font-size: 35px;
+        font-weight: 500;
+        font-family: "Exo 2", sans-serif;
+        text-align: right;
+      }
+
+      .rmore {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #ffb70a;
+        border: none;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .ctact {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        border: none;
+        background-color: #ffffff;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .ctact2 {
+        font-size: 13px;
+        font-weight: 600;
+        color: #000000;
+        border: none;
+        background-color: #ffffff;
+        border-radius: 6px;
+        
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .lmore {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #000000;
+        width: 100%;
+        border: none;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .holdblogs {
+          padding: 40px;
+          background-color: #ffffff;
+        }
+
+        .innerblog {
+          padding: 40px;
+        }
+
+        .btnfons {
+        background-color: #ffffff;
+        border: 2px solid #723E3E;
+        border-radius: 30px;
+        color: #000;
+        font-size: 14px;
+      }
+
+      .btnfons2 {
+        background-color: #723E3E;
+        border: 2px solid #723E3E;
+        border-radius: 30px;
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      .ctatextopen {
+        text-align: center; 
+        font-family: 'Bodoni Moda', serif; 
+        font-size: 35px; 
+        color: #723E3E;
+      }
+
+      .btncustomlmore {
+          background-color: #ca8c3f;
+          border: none;
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+          padding-left: 40px;
+          padding-right: 40px;
+      }
+
+      .btnwhite {
+        background-color: white;
+        border: none;
+        color: #000000;
+        font-weight: 600;
+      }
+
+      .btn-live {
+        background-color: #ffffff;
+        color: #ff0000;
+        border: white;
+      }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .acttextbig {
+          color: white;
+          margin-top: 0px;
+          font-weight: 600;
+          font-size: 35px;
+          text-align: left;
+          font-family: "Bodoni Moda", serif;
+        }
+
+        .subtee2 {
+          font-size: 14px;
+        }
+
+        .homeheadbigtext {
+          color: #6a2f1e;
+          margin-top: 0px;
+          font-weight: 500;
+          font-size: 25px;
+          text-align: left;
+        }
+
+        .homesect1 {
+          padding: 25px;
+          background-color: #ffffff;
+        }
+
+        .holderservices {
+          padding: 25px;
+          background-color: #F2F2F2;
+        }
+
+        .holdblogs {
+          padding: 25px;
+          background-color: #ffffff;
+        }
+
+        .innerblog {
+          padding: 20px;
+        }
+
+        .btnfons {
+        background-color: #ffffff;
+        border: 2px solid #723E3E;
+        border-radius: 20px;
+        color: #000;
+        font-size: 10px;
+        margin-top: 30px;
+      }
+
+      .btnfons2 {
+        background-color: #723E3E;
+        border: 2px solid #723E3E;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      .ctatextopen {
+        text-align: center; 
+        font-family: 'Bodoni Moda', serif; 
+        font-size: 25px; 
+        color: #723E3E;
+      }
+      }
+    </style>
+
+    <section class="homeslider">
+      <header>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item active"
+              style="
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('slider4.jpg');
+                background-position: center;
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h1 class="acttextbig" id="caption-title-md">
+                  Empowering Lives for Holistic Health
+                </h1>
+                <p style="text-align: left" class="subtee2" id="caption-description-md">
+                  Discover the transformative power of faith and science. Join our mission to inspire purpose and achieve balance in all aspects of life.
+                </p>
+                <p style="text-align: left">
+                  <a href="" id="resource-link-md" style="display: none;" class="btn btn-primary btn-live"><i class="fa fa-circle" aria-hidden="true"></i> Watch Live</a>
+                </p>
+                
+              </div>
+            </div>
+
+            
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('slider1.jpg');
+                background-position: center;
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h1 class="acttextbig">
+                  A Safe Space for Healing and Growth.
+                 </h1>
+                 <p style="text-align: left" class="subtee2">
+                  Explore our spirituality groups and healing prayers designed to restore emotional and spiritual resilience through compassionate care.
+                 </p>
+              
+              </div>
+            </div>
+
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('slider2.jpg');
+                background-position: center;
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h1 class="acttextbig">
+                  Inspiring the Next Generation
+                 </h1>
+                 <p style="text-align: left" class="subtee2">
+                  Through our Train-Up a Child Program, we equip children and youth with Christlike character and values to thrive in their purpose.
+                 </p>
+              
+              </div>
+            </div>
+
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('slider3.jpg');
+                background-position: center;
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h1 class="acttextbig">
+                  Join Our Community of Faith
+                 </h1>
+                 <p style="text-align: left" class="subtee2">
+                  Participate in our interfaith gatherings to connect, grow, and gain strength through shared spiritual reflections.
+                 </p>
+                
+              </div>
+            </div>
+
+            <!-- Slide Two - Set the background image for this slide in the line below -->
+            <div
+              class="carousel-item"
+              style="
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('cc11.jpg');
+                background-position: center;
+              "
+            >
+              <div class="carousel-caption d-md-block">
+                <h1 class="acttextbig">
+                  Living the Holistic Health Circle
+                 </h1>
+                 <p style="text-align: left" class="subtee2">
+                  Embrace holistic health with our webinars and practical strategies. Integrate faith-based principles into your daily life for balance and well-being.
+                 </p>
+                
+              </div>
+            </div>
+
+            <!-- Slide Three - Set the background image for this slide in the line below -->
+           <!-- Navigation buttons -->
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+  </a>
+          </div>
+          
+        </div>
+      </header>
+
+      <section class="aboutSec">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="welc-title">Empowering Lives for Holistic Health</h1>
+            <p class="welc-descrip">Discover the transformative power of faith and science. Join our mission to inspire purpose<br> and achieve balance in all aspects of life.</p>
+          </div>
+        </div>
+        <div class="row"style="margin-top: 30px;">
+          <div class="col-lg-3">
+            <div class="holdmejerh">
+              <img src="physical-wellbeing.png" width="50px" style="margin-bottom: 10px;">
+              <p class="hmj-title">Physical Wellness</p>
+              <p class="hmj-descrip">Prioritize physical health as God's temple by fostering self-care, healthy habits, and balanced living for overall well-being.</p>
+              <p><a class="hmj-link" href="membership.html" style="color: #0046b0; text-decoration: none;">Join Us  <img src="right-arrow-2.png" width="15px" style="margin-left: 20px;"></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="holdmejerh">
+              <img src="mental.png" width="50px" style="margin-bottom: 10px;">
+              <p class="hmj-title">Emotional Resilience</p>
+              <p class="hmj-descrip">Cultivate gratitude, self-compassion, and forgiveness to build emotional stability and navigate life's hardships with inner peace.</p>
+              <p><a class="hmj-link" href="membership.html" style="color: #0046b0; text-decoration: none;">Join Us  <img src="right-arrow-2.png" width="15px" style="margin-left: 20px;"></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="holdmejerh">
+              <img src="meditation.png" width="50px" style="margin-bottom: 10px;">
+              <p class="hmj-title">Mental Resilience</p>
+              <p class="hmj-descrip">Strengthen mental clarity and focus by adopting practices that improve thought, enhance problem-solving abilities during challenges.</p>
+              <p><a class="hmj-link" href="membership.html" style="color: #0046b0; text-decoration: none;">Join Us  <img src="right-arrow-2.png" width="15px" style="margin-left: 20px;"></a></p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="holdmejerh">
+              <img src="pray.png" width="50px" style="margin-bottom: 10px;">
+              <p class="hmj-title">Spiritual Growth</p>
+              <p class="hmj-descrip">Seek purpose and meaning through faith, deepening your relationship with God and aligning daily life with divine principles.</p>
+              <p><a class="hmj-link" href="membership.html" style="color: #0046b0; text-decoration: none;">Join Us  <img src="right-arrow-2.png" width="15px" style="margin-left: 20px;"></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p style="text-align: center; margin-top: 30px;">
+              <a href="ourvision.html" class="btn btn-lg btncustomlmore">Learn More About Us <img src="right-arrow.png" width="15px" style="margin-left: 20px;"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="holdmoredets">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="homesectCap" style="font-size: 32px;">
+          What We Do.
+        </h1>
+        <p style="font-size: 14px; color: #4a4a4a; line-height: 28px; font-weight: 400;">
+          At Christian Therapeutic Ministry: Impact for Mission, our purpose is to inspire and empower individuals to live purpose-driven lives through holistic health, inspiring purpose and achieving balance in all aspects of life.
+          <a href="ourvision.html" style="color: #ca8c3f; font-weight: 600;">read more</a>
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <a href="programs.html" style="text-decoration: none;">
+          <div class="servicesholder">
+            <img src="cc1.jpeg" class="img-fluid" style="border-top-left-radius: 7px; border-top-right-radius: 7px;" />
+            <p style="padding: 20px;">
+              <span class="homesectCap" style="font-size: 24px;">Faith and Fellowship Hour</span><br>
+              <span style="font-size: 14px; line-height: 28px; color: #000000;">
+                Connect with a diverse community every Sundays, 6:00pm – 7:00pm (EST), A Non-Denominational Time for Spiritual Growth. These gatherings focus on spiritual reflections and foster unity across faith traditions. Be inspired by shared experiences and gain insights to strengthen your spiritual walk.
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a href="programs.html" style="text-decoration: none;">
+          <div class="servicesholder">
+            <img src="cc10.jpg" class="img-fluid" style="border-top-left-radius: 7px; border-top-right-radius: 7px;" />
+            <p style="padding: 20px;">
+              <span class="homesectCap" style="font-size: 24px;">Thrive & Pray: Holistic Health Webinar!</span><br>
+              <span style="font-size: 14px; line-height: 28px; color: #000000;">
+                Join us every Thursdays, 8 PM – 9 PM(EST) for a special prayer session dedicated to healing and restoration. Experience the power of collective prayer and discover renewed hope as we seek God's healing touch for emotional, physical, and spiritual needs.
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a href="programs.html" style="text-decoration: none;">
+          <div class="servicesholder">
+            <img src="cc6.jpg" class="img-fluid" style="border-top-left-radius: 7px; border-top-right-radius: 7px;" />
+            <p style="padding: 20px;">
+              <span class="homesectCap" style="font-size: 24px;">Charitable Outreach</span><br>
+              <span style="font-size: 14px; line-height: 28px; color: #000000;">
+                We are committed to making a difference in underprivileged communities. Through acts of service, we provide relief, support, and resources to those in need, demonstrating God’s love in action.
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a href="programs.html" style="text-decoration: none;">
+          <div class="servicesholder">
+            <img src="cc4.jpg" class="img-fluid" style="border-top-left-radius: 7px; border-top-right-radius: 7px;" />
+            <p style="padding: 20px;">
+              <span class="homesectCap" style="font-size: 24px;">Holistic Health Webinar</span><br>
+              <span style="font-size: 14px; line-height: 28px; color: #000000;">
+                This interactive session explores self-care, faith-based principles, and scientifically proven methods for addressing physical, emotional, mental, and spiritual well-being.
+              </span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ourPrograms">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="homesectCapWhite" style="font-size: 32px;">
+          Our Programs
+        </h1>
+        <p style="font-size: 14px; color: #ffffff; line-height: 28px; font-weight: 400;">
+          At Christian Therapeutic Ministry: Impact for Mission, our purpose is to inspire and empower individuals to live purpose-driven lives through holistic health.
+          <a href="programs.html" style="color: #ca8c3f; font-weight: 600;">read more</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-lg-6">
+        <div class="programHold">
+          <h3 class="card-title c-pt mb-3">Train-Up a Child Program</h3>
+          <p class="card-text">This Bible-based program nurtures Christlike character and values in children and youth.</p>
+          <div class="mt-4">
+            <h5 class="c-ptt">Program Details</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <strong>Target Groups:</strong> 
+                <p class="ml-3 mb-2">Elementary, middle, and high school students.</p>
+              </li>
+              <li class="mb-2">
+                <strong>Schedule:</strong>
+                <p class="ml-3 mb-2">Wednesdays (evening) and Saturdays (afternoon)</p>
+              </li>
+              <li>
+                <strong>How to Join:</strong>
+                <p class="ml-3 mb-0">Parents can register their children by completing a consent form.</p>
+              </li>
+            </ul>
+            <p style="margin-top: 15px;">
+              <a href="trainupachild.html" class="btn btnwhite">Program Details</a>
+            </p>
+          </div> 
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="programHold">
+          <h3 class="card-title c-pt mb-3">Moral Injury/PTSD/Mental Health Spirituality Group</h3>
+          <p class="card-text">Led by a board-certified chaplain, this group offers tailored spiritual care interventions.</p>
+          <div class="mt-4">
+            <h5 class="c-ptt">Program Details</h5>
+            <ul class="list-styled">
+              <li class="mb-2"> 
+                <p class="ml-3 mb-2">Confession.</p>
+              </li>
+              <li class="mb-2">
+                <p class="ml-3 mb-2">Forgiveness and self-forgiveness</p>
+              </li>
+              <li>
+                <p class="ml-3 mb-0">Gratitude practice</p>
+              </li>
+              <li>
+                <p class="ml-3 mb-0">Meaning-making</p>
+              </li>
+              <li>
+                <p class="ml-3 mb-0">Resilience-building</p>
+              </li>
+            </ul>
+            <p style="margin-top: 10px;">
+              <a href="moralinjury.html" class="btn btnwhite">Program Details</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+      <style type="text/css">
+        .foothead {
+          color: white;
+          font-weight: 500;
+          font-family: "Montserrat", sans-serif;
+        }
+  
+        .imagebg {
+          background-color: #d09e61;
+        }
+      </style>
+  
+      <footer class="py-5 imagebg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p style="text-align: center; margin-bottom: 20px;">
+                <img src="ctmlogo2.png" width="100px" height="100px" class="img-fluid"><br>
+                <span style="color: #ffffff; font-size: 25px; font-family: 'Bebas Neue', sans-serif;">Christian Therapeutic Ministry</span>
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="innerfooter">
+                <h5 class="foothead">About Us</h5>
+                <ul style="list-style: none; padding-left: 0">
+                  <li>
+                    <a
+                      href="/"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      HOME</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ourvision.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      VISION</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="programs.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      OUR PROGRAMS</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ourevents.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      EVENTS</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="membership.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      MEMBERSHIP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      DONATE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="blog.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      BLOG</a
+                    >
+                  </li>
+                  <li>
+                    <a style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration: none;" href="adminhome.html">Admin</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="innerfooter">
+                <h5 class="foothead">Contact Us</h5>
+                <p style="color: white; font-size: 14px">
+                  <span
+                    ><i class="fa fa-envelope" aria-hidden="true"></i> Mailing
+                    Address</span
+                  ><br />
+                  <span style="font-weight: 300; font-size: 12px"
+                    >Post Office 60 Severn, MD 21144</span
+                  >
+                </p>
+  
+                <p style="color: white; font-size: 14px">
+                  <!-- <span><i class="fa fa-phone" aria-hidden="true"></i> Mobile: +1 (813) 365-9976</span><br>
+                <span><i class="fa fa-phone" aria-hidden="true"></i> Office: +1 (813) 365-9976</span><br> -->
+                  <span
+                    ><i class="fa fa-envelope" aria-hidden="true"></i> Email:
+                    info@impactformission.org</span
+                  ><br />
+                </p>
+  
+                <span
+                  ><a
+                    href="https://wa.me/message/6EYTHGZ4ZC5NG1"
+                    style="
+                      font-weight: 300;
+                      color: #ffffff;
+                      font-size: 13px;
+                      text-decoration: none;
+                    "
+                    
+                    ><i
+                      class="fa fa-whatsapp"
+                      style="color: white; margin-right: 5px"
+                      aria-hidden="true"
+                    ></i>
+                    WhatsApp Us</a
+                  ></span
+                >
+              </div>
+            </div>
+  
+            
+          </div>
+          <div class="row" style="margin-top: 30px">
+            <div class="col-lg-12">
+              <p
+                class="m-0 text-white"
+                style="text-align: center; font-size: 14px"
+              >
+                Copyright &copy; Christian Therapeutic Ministry, 2025
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <!--  <p class="m-0 text-white" style="text-align: right; font-size: 11px;">
+            Created By: <a style="font-weight: 300; color: yellow;" href="http://helpbusinessesonline.com" >
+              <img src="https://res.cloudinary.com/nikasemo/image/upload/v1515813123/logoforland_hke282.png" width="70px" height="45px"></a> 
+          </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+
+    </div>
+  </div>
+
+
+      <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"
+    ></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const db2 = firebase.firestore();
+        const query = db2.collection('live').where('active', '==', true);
+
+        query.limit(1).get().then((querySnapshot) => {
+          if (!querySnapshot.empty) {
+            const doc = querySnapshot.docs[0]; // Get the first document
+            const data = doc.data();
+            console.log(doc.data());
+            // Update caption, description, and background image based on Firestore data
+            document.getElementById('caption-title-md').innerText = data.title || "Default Title";
+            document.getElementById('caption-description-md').innerText = data.description || "Default Description";
+            const resourcelink = document.getElementById('resource-link-md');
+            resourcelink.style.display = "inline"; // Show the link
+            const link = document.getElementById('resource-link-md');
+            link.href = data.link || "#"; // Set the link
+            // link.innerText = "Learn More"; // Uncomment if you want to set link text
+
+            // Change the background image
+            // const carouselItem = document.getElementById('carousel-item');
+            // carouselItem.style.backgroundImage = `url('${data.imageUrl || 'slider4.jpg'}')`; // Set new image or default
+          }
+        }).catch((error) => {
+          console.error("Error fetching documents: ", error);
+        });
+      });
+    </script>
+
+  </body>
+</html>

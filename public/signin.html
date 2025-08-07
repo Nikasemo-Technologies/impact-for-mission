@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Christian Therapeutic Ministry</title>
+    <link
+    href="home.css"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!--  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.css"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
+        authDomain: "impact-for-missions.firebaseapp.com",
+        projectId: "impact-for-missions",
+        storageBucket: "impact-for-missions.firebasestorage.app",
+        messagingSenderId: "178209392285",
+        appId: "1:178209392285:web:537eae20dc70845dc6f674",
+        measurementId: "G-S1G45WKR67"
+      };
+
+        // Initialize Firebase
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Now you can access Firebase services
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+        const analytics = firebase.analytics();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <style type="text/css">
+      .navbackground {
+        background: rgba(255, 255, 255, 1);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+        -moz-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+      }
+
+      .blurred-background {
+        background: rgba(255, 255, 255, 1); /* Adjust color and opacity as needed */
+        
+      }
+
+      .navbar-brand1 {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+      }
+
+      .navbar-light .navbar-brand1 {
+        font-weight: 700;
+        font-family: "Muli", sans-serif;
+      }
+
+      .navbar-scroll {
+        color: #000;
+        font-weight: 700;
+        font-family: "Muli", sans-serif;
+      }
+
+      /* .navbar-light .navbar-brand:focus,
+      .navbar-light .navbar-brand:hover {
+        color: white;
+      }
+
+      .navbar-light .navbar-scroll:focus,
+      .navbar-light .navbar-scroll:hover {
+        color: #343a40;
+      } */
+
+      .navbar-light .navbar-nav .nav-link {
+        color: #0046b0;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        transition: background-color 0.5s ease-in-out;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out;
+        border-bottom: 4px solid transparent;
+      }
+
+      .navlinkscroll {
+        color: #343a40;
+      }
+
+      .navbar-light .navbar-nav .nav-link:focus {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+        /*border-bottom-color:#f17100;*/
+      }
+
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+      }
+
+      .navbar-light .navbar-nav .nav-link.disabled {
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-light .navbar-nav .show > .nav-link,
+      .navbar-light .navbar-nav .active > .nav-link,
+      .navbar-light .navbar-nav .nav-link.show,
+      .navbar-light .navbar-nav .nav-link.active {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #ca8c3f;
+      }
+
+      .navbar-toggler {
+        border: none;
+        background: transparent !important;
+      }
+      .navbar-toggler:hover {
+        background: transparent !important;
+      }
+      .navbar-toggler .icon-bar {
+        display: block;
+        background-color: #ffffff;
+        width: 26px;
+        height: 2px;
+        transition: all 0.2s;
+      }
+      .navbar-toggler .icon-bar + .icon-bar {
+        margin-top: 5px;
+      }
+      .navbar-toggler .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .navbar-toggler .middle-bar {
+        opacity: 0;
+      }
+      .navbar-toggler .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+      .navbar-toggler.collapsed .top-bar {
+        transform: rotate(0);
+      }
+      .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+      }
+      .navbar-toggler.collapsed .bottom-bar {
+        transform: rotate(0);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 1rem 0 0;
+        font-size: 14px;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 1);
+        background-clip: padding-box;
+        border-radius: 0rem;
+      }
+
+      .dropdown-divider {
+        height: 0;
+        margin: 0.5rem 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+      }
+
+      .dropdown-item {
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding: 1.25rem 1.5rem;
+        clear: both;
+        color: #000000;
+        font-weight: 300;
+        text-align: inherit;
+        white-space: nowrap;
+        background: none;
+        border: 0;
+      }
+
+      .dropdown-item:focus,
+      .dropdown-item:hover {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #1b1464;
+        font-weight: 500;
+      }
+
+      .dropdown-item.active,
+      .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #e08d1e;
+      }
+
+      .dropdown-item.disabled,
+      .dropdown-item:disabled {
+        color: #f5b822;
+        background-color: transparent;
+      }
+
+      .apppartner {
+        background-color: #ffb900;
+        color: #0b1936;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+      }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .fht {
+          margin-top: 30px;
+        }
+      }
+    </style>
+
+    <style>
+      /* Add this CSS to style the carousel indicators */
+      .carousel {
+        position: relative; /* Ensure the carousel is the positioning context */
+      }
+
+      .carousel-indicators {
+        position: absolute; /* Position indicators absolutely within the carousel */
+        left: 1100px; /* Adjust the right position as needed */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        display: flex;
+        flex-direction: column; /* Make indicators vertical */
+        z-index: 1000; /* Ensure indicators are on top */
+      }
+
+      .carousel-indicators li {
+        margin: 5px 0; /* Space between indicators */
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+        border-radius: 50%; /* Make them circular */
+        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
+      }
+
+      .carousel-indicators .active {
+        background-color: #ffffff; /* Active indicator color */
+      }
+
+      .carousel-control-prev,
+.carousel-control-next {
+    top: auto;
+    bottom: 0;
+          width: 50px;
+          height: 50px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+      }
+
+      .carousel-control-prev {
+          left: 20px;
+          bottom: 30px;
+      }
+
+      .carousel-control-next {
+          left: 80px;
+          bottom: 30px;
+      }
+
+      /* Optional: Adjust icon position within the button */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          width: 20px;
+          height: 20px;
+      }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .carousel-indicators {
+        position: absolute; /* Position indicators absolutely within the carousel */
+        left: -40px; /* Adjust the right position as needed */
+        top: 50%; /* Center vertically */
+        display: none;
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        display: flex;
+        flex-direction: column; /* Make indicators vertical */
+        z-index: 1000; /* Ensure indicators are on top */
+      }
+
+      .carousel-indicators li {
+        margin: 5px 0; /* Space between indicators */
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+        border-radius: 50%; /* Make them circular */
+        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
+      }
+
+      .carousel-indicators .active {
+        background-color: #ffffff; /* Active indicator color */
+      }
+      }
+    </style>
+  </head>
+
+  <body style="font-family: 'Roboto', serif;">
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top navbackground dottt"
+      style="z-index: 99"
+    >
+      <div class="container navbodyhold" style="">
+        <a
+          class="navbar-brand1"
+          href="index.html"
+          style="color: #0047ab; font-family: 'Montserrat', sans-serif; text-align: center;"
+        >
+          <img
+            src="ctmlogo1.png"
+            class="img-fluid"
+            width="250px"
+            style="margin-right: 5px; margin-bottom: -7px;"
+          />
+         
+        </a>
+        <button
+          onclick="addNavBackground()"
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            
+
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourvision.html"
+                >VISION
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="who-we-serve.html"
+                >WHO WE SERVE
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="programs.html"
+                >OUR PROGRAMS
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+           
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="membership.html">
+                MEMBERSHIP
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="#!">
+                DONATE
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="blog.html">
+                BLOG
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="changecolor2" href="blog.html">
+                CONTACT US
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://web.facebook.com/profile.php?id=61571194774764" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/@ChristianTherapeuticMinistry-I" target="blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style type="text/css">
+      .homeslider {
+        margin-top: 0px;
+      }
+
+      .carousel {
+        position: relative;
+        top: 0px;
+      }
+
+      .acttextbig {
+        color: white;
+        margin-top: 0px;
+        font-weight: 600;
+        font-size: 55px;
+        text-align: left;
+        font-family: "DM Serif Text", serif;
+      }
+
+      .homeheadbigtext {
+        color: #6a2f1e;
+        margin-top: 0px;
+        font-weight: 500;
+        font-size: 40px;
+        text-align: left;
+      }
+
+      .holderservices {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #F2F2F2;
+      }
+
+      .homesect1 {
+        padding: 60px;
+        background-color: #ffffff;
+      }
+
+      .carousel-item {
+        min-height: 700px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .carousel-inner {
+        position: relative;
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 5%;
+        bottom: 100px;
+        left: 15%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: right;
+        color: #fff;
+        text-align: center;
+      }
+
+      .capttxt {
+        color: #ffffff;
+        font-size: 35px;
+        font-weight: 500;
+        font-family: "Exo 2", sans-serif;
+        text-align: right;
+      }
+
+      .rmore {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #ffb70a;
+        border: none;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .ctact {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        border: none;
+        background-color: #ffffff;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .ctact2 {
+        font-size: 13px;
+        font-weight: 600;
+        color: #000000;
+        border: none;
+        background-color: #ffffff;
+        border-radius: 6px;
+        
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .lmore {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #000000;
+        width: 100%;
+        border: none;
+        border-radius: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .holdblogs {
+          padding: 40px;
+          background-color: #ffffff;
+        }
+
+        .innerblog {
+          padding: 40px;
+        }
+
+        .btnfons {
+        background-color: #ffffff;
+        border: 2px solid #723E3E;
+        border-radius: 30px;
+        color: #000;
+        font-size: 14px;
+      }
+
+      .btnfons2 {
+        background-color: #723E3E;
+        border: 2px solid #723E3E;
+        border-radius: 30px;
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      .ctatextopen {
+        text-align: center; 
+        font-family: 'Bodoni Moda', serif; 
+        font-size: 35px; 
+        color: #723E3E;
+      }
+
+      .btncustomlmore {
+          background-color: #ca8c3f;
+          border: none;
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+      }
+
+      .hometoptext {
+        font-family: "DM Serif Text", serif;
+        font-size: 60px; 
+        text-align: left; 
+       bottom: 150px; 
+        color: #ffffff;
+      }
+
+      .imagebg1 {
+        background: linear-gradient(
+            0deg,
+            rgba(5, 7, 158, 0.5),
+            rgba(11, 24, 201, 0.85)
+          ),
+          url("cc11.jpg");
+          padding: 30px;
+          position: relative;
+          height: 100vh;
+      }
+
+      .footer-content {
+          position: absolute; /* Position the footer content absolutely */
+          bottom: 70px; /* Align to the bottom */
+          width: 100%; /* Full width */
+        }
+
+        .firstsect {
+          padding: 40px;
+        }
+
+        .holdvision {
+          background-color: #0046b0;
+          border-radius: 20px;
+          padding: 20px;
+          width: 100%;
+          color: #ffffff;
+        }
+
+      @media only screen and (min-width: 100px) and (max-width: 600px) {
+        .acttextbig {
+          color: white;
+          margin-top: 0px;
+          font-weight: 600;
+          font-size: 35px;
+          text-align: left;
+          font-family: "Bodoni Moda", serif;
+        }
+
+        .subtee2 {
+          font-size: 14px;
+        }
+
+        .homeheadbigtext {
+          color: #6a2f1e;
+          margin-top: 0px;
+          font-weight: 500;
+          font-size: 25px;
+          text-align: left;
+        }
+
+        .homesect1 {
+          padding: 25px;
+          background-color: #ffffff;
+        }
+
+        .holderservices {
+          padding: 25px;
+          background-color: #F2F2F2;
+        }
+
+        .holdblogs {
+          padding: 25px;
+          background-color: #ffffff;
+        }
+
+        .innerblog {
+          padding: 20px;
+        }
+
+        .btnfons {
+        background-color: #ffffff;
+        border: 2px solid #723E3E;
+        border-radius: 20px;
+        color: #000;
+        font-size: 10px;
+        margin-top: 30px;
+      }
+
+      .btnfons2 {
+        background-color: #723E3E;
+        border: 2px solid #723E3E;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 14px;
+      }
+
+      .ctatextopen {
+        text-align: center; 
+        font-family: 'Bodoni Moda', serif; 
+        font-size: 25px; 
+        color: #723E3E;
+      }
+      }
+    </style>
+
+
+
+
+
+<section class="regformholder">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <br><br><br><br><br><br><br><br>
+                <h3 style="font-family: 'Bebas Neue', cursive; font-size: 45px; color: #0046b0;">
+                    Sign In
+                </h3>
+                <p style="font-size: 14px; line-height: 28px;">
+                    
+                </p>
+                <form id="signinform">
+                    <div class="form-group">
+                        <label for="username" style="font-weight: 500; font-size: 14px; color: #0046b0;">
+                            Email</label>
+                        <input type="text" class="form-control" placeholder="Enter your username" name="loginEmail"
+                            id="login_email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username"
+                            style="font-weight: 500; font-size: 14px; color: #0046b0;">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" name="loginPassword"
+                            id="login_password" required>
+                    </div>
+                    
+                    <button id="formSubmitBtnLogin" type="button" class="btn btnfons2">Login</button>
+                </form>
+                <p style="font-size: 14px; line-height: 28px;">
+                    Login with your admin credentials to enter your portal.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+      <style type="text/css">
+        .foothead {
+          color: white;
+          font-weight: 500;
+          font-family: "Montserrat", sans-serif;
+        }
+  
+        .imagebg {
+          background-color: #d09e61;
+        }
+      </style>
+  
+      <footer class="py-5 imagebg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p style="text-align: center; margin-bottom: 20px;">
+                <img src="ctmlogo2.png" width="100px" height="100px" class="img-fluid"><br>
+                <span style="color: #ffffff; font-size: 25px; font-family: 'Bebas Neue', sans-serif;">Christian Therapeutic Ministry</span>
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="innerfooter">
+                <h5 class="foothead">About Us</h5>
+                <ul style="list-style: none; padding-left: 0">
+                  <li>
+                    <a
+                      href="/"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      HOME</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ourvision.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      VISION</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="programs.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      OUR PROGRAMS</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="ourevents.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      EVENTS</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="membership.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      MEMBERSHIP</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      DONATE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="blog.html"
+                      
+                      style="
+                        color: white;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-decoration: none;
+                      "
+                    >
+                      BLOG</a
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="innerfooter">
+                <h5 class="foothead">Contact Us</h5>
+                <p style="color: white; font-size: 14px">
+                  <span
+                    ><i class="fa fa-envelope" aria-hidden="true"></i> Mailing
+                    Address</span
+                  ><br />
+                  <span style="font-weight: 300; font-size: 12px"
+                    >Post Office 60 Severn, MD 21144</span
+                  >
+                </p>
+  
+                <p style="color: white; font-size: 14px">
+                  <!-- <span><i class="fa fa-phone" aria-hidden="true"></i> Mobile: +1 (813) 365-9976</span><br>
+                <span><i class="fa fa-phone" aria-hidden="true"></i> Office: +1 (813) 365-9976</span><br> -->
+                  <span
+                    ><i class="fa fa-envelope" aria-hidden="true"></i> Email:
+                    info@impactformission.org</span
+                  ><br />
+                </p>
+  
+                <span
+                  ><a
+                    href="https://wa.me/message/6EYTHGZ4ZC5NG1"
+                    style="
+                      font-weight: 300;
+                      color: #ffffff;
+                      font-size: 13px;
+                      text-decoration: none;
+                    "
+                    
+                    ><i
+                      class="fa fa-whatsapp"
+                      style="color: white; margin-right: 5px"
+                      aria-hidden="true"
+                    ></i>
+                    WhatsApp Us</a
+                  ></span
+                >
+              </div>
+            </div>
+  
+            
+          </div>
+          <div class="row" style="margin-top: 30px">
+            <div class="col-lg-12">
+              <p
+                class="m-0 text-white"
+                style="text-align: center; font-size: 14px"
+              >
+                Copyright &copy; Christian Therapeutic Ministry, 2025
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <!--  <p class="m-0 text-white" style="text-align: right; font-size: 11px;">
+            Created By: <a style="font-weight: 300; color: yellow;" href="http://helpbusinessesonline.com" >
+              <img src="https://res.cloudinary.com/nikasemo/image/upload/v1515813123/logoforland_hke282.png" width="70px" height="45px"></a> 
+          </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+
+    </div>
+  </div>
+
+
+      <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"
+    ></script>
+
+    <script>
+        let signinform = document.querySelector("#signinform");
+        let formSubmitBtnLogin = document.querySelector("#formSubmitBtnLogin");
+
+        formSubmitBtnLogin.addEventListener("click", (e) => {
+                e.preventDefault();
+            var email = signinform.loginEmail.value;
+            var password = signinform.loginPassword.value;
+            formSubmitBtnLogin.classList.add("disabled");
+            formSubmitBtnLogin.textContent = "Signing In.."
+
+            if(email == "" || password == ""){
+                console.log("Cant login")
+                formSubmitBtnLogin.classList.remove("disabled");
+                formSubmitBtnLogin.textContent = "Login";
+                alert("Kindly enter the correct login details")
+            } else {
+                
+                firebase.auth().signInWithEmailAndPassword(email, password).then(function (firebaseUser) {
+                    // Success 
+                    console.log(firebaseUser.user.uid)
+                    var firbaseuid = firebaseUser.user.uid;
+                    localStorage.setItem("user_id", firbaseuid);
+                    window.location = "adminhome.html";
+                })
+                    .catch(function (error) {
+                        // Error Handling
+                        formSubmitBtnLogin.classList.remove("disabled");
+                        formSubmitBtnLogin.textContent = "Login";
+                        signinform.loginEmail.value = "";
+                        signinform.loginPassword.value = "";
+                        alert(error);
+                    });
+                
+            }
+        });
+    </script>
+  </body>
+</html>
