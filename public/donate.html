@@ -67,7 +67,6 @@
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
     </script>
-    <script src="app.js"></script>
 
     <style type="text/css">
       .navbackground {
@@ -641,6 +640,11 @@
           font-size: 25px;
           color: #723e3e;
         }
+
+        .zellelogo {
+          display: flex;
+          justify-content: center;
+        }
       }
     </style>
 
@@ -648,170 +652,97 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="hometoptext">Contact Us</h1>
+            <h1 class="hometoptext">Donate</h1>
           </div>
         </div>
       </div>
     </section>
 
     <section class="holdcontactbody">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3
-              style="
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 500;
-                font-size: 22px;
-                color: #000;
-              ">
-              Contact Information
-            </h3>
-            <hr />
-            <p style="text-align: left; font-size: 14px; line-height: 30px">
-              <span>
-                <i
-                  class="fa fa-phone"
-                  aria-hidden="true"
-                  style="color: #9f6c1b"></i>
-              </span>
-              <span style="font-weight: 400">+1 757-305-8433</span>
-              <br />
-              <span>
-                <i
-                  class="fa fa-whatsapp"
-                  aria-hidden="true"
-                  style="color: #9f6c1b"></i>
-              </span>
-              <span style="font-weight: 400">+1 757-305-8433</span>
-              <br />
-              <span>
-                <i
-                  class="fa fa-envelope"
-                  aria-hidden="true"
-                  style="color: #9f6c1b"></i>
-              </span>
-              <span style="font-weight: 400">impactformission@gmail.com</span>
-              <br />
-              <span>
-                <i
-                  class="fa fa-map-marker"
-                  aria-hidden="true"
-                  style="color: #9f6c1b"></i>
-              </span>
-              <span style="font-weight: 400">
-                6100 Chevy Chase Drive, Suite 103 Laurel, Maryland 20707
-              </span>
-              <br />
+      <div class="container py-5">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2>Ways to Support Impact for Mission</h2>
+            <p class="lead text-muted">
+              Your generous contribution helps us carry out our Orphan Care
+              Mission and expand holistic pastoral care across communities. You
+              can give in one of the following ways:
             </p>
-            <br />
           </div>
-          <div class="col-md-6">
-            <div class="formholderctact">
-              <form
-                class="new_contact"
-                id="new_contact"
-                accept-charset="UTF-8"
-                method="post">
-                <h3
-                  style="
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 500;
-                    font-size: 22px;
-                    color: #000000;
-                  ">
-                  Work/partner with us.
-                </h3>
-                <hr />
-                <p
-                  style="
-                    color: #ffffff;
-                    font-weight: 300;
-                    font-size: 14px;
-                    color: #000000;
-                  ">
-                  Fill the form below to make enquiries about work or potential
-                  partnerships with us.
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card h-100 text-center shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <div class="zellelogo">
+                  <img src="paypal-ogo.png" alt="" width="150px" />
+                </div>
+                <p class="card-text">
+                  Donate securely with your PayPal account or credit card. It's
+                  fast, easy, and safe.
                 </p>
-                <div class="form-group">
-                  <label
-                    style="color: #9f6c1b; font-size: 12px; font-weight: 600">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Full Name"
-                    name="contactname"
-                    id="contact_name"
-                    required />
-                </div>
-                <div class="form-group">
-                  <label
-                    style="color: #9f6c1b; font-size: 12px; font-weight: 600">
-                    Phone number
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Phone number"
-                    name="contactphone"
-                    id="contact_phone"
-                    required />
-                </div>
+                <a
+                  href="https://www.paypal.com/donate/?hosted_button_id=B3RZ4HKGFVVWU"
+                  class="btn btn-primary mt-auto">
+                  Donate with PayPal
+                </a>
+              </div>
+            </div>
+          </div>
 
-                <div class="form-group">
-                  <label
-                    style="color: #9f6c1b; font-size: 12px; font-weight: 600">
-                    Email
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Where do you live?"
-                    name="contactlocation"
-                    id="contact_location"
-                    required />
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card h-100 text-center shadow bg-primary text-white">
+              <div class="card-body d-flex flex-column">
+                <span
+                  class="badge rounded-pill bg-light text-primary align-self-center mb-3 px-3 py-2">
+                  Preferred Method
+                </span>
+                <div
+                  class="zellelogo"
+                  style="margin-bottom: 30px; margin-top: 10px">
+                  <img src="zelle-logo.png" alt="" width="100px" />
                 </div>
-
-                <div class="form-group">
-                  <label
-                    style="color: #9f6c1b; font-size: 12px; font-weight: 600">
-                    What do you need?
-                  </label>
-
-                  <select id="services" class="form-control">
-                    <option value="cocoa_pod_breaking">
-                      Cocoa pod breaking
-                    </option>
-                    <option value="tree_planting">Tree planting</option>
-                    <option value="beehive_installation_training">
-                      Beehive installation and training
-                    </option>
-                    <option value="rentals">Rentals</option>
-                    <option value="general_enquiries">General enquiries</option>
-                  </select>
+                <p class="card-text">
+                  Send your contribution directly from your banking app. This
+                  method has no fees, so 100% of your gift supports our work.
+                </p>
+                <div
+                  class="mt-auto p-2 text-light border border-lg border-light rounded">
+                  <strong>Name:</strong>
+                  Impact for Mission
+                  <br />
+                  Christianorphanageintogo@gmail.com
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <div class="form-group">
-                  <label
-                    style="color: #9f6c1b; font-size: 12px; font-weight: 600">
-                    Message
-                  </label>
-                  <textarea
-                    class="form-control"
-                    placeholder="Tell us more.."
-                    name="contactmessage"
-                    id="contact_message"
-                    rows="4"></textarea>
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card h-100 text-center shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <div class="zellelogo">
+                  <img src="mail.png" alt="" width="100px" />
                 </div>
-                <button
-                  type="submit"
-                  id="sendtofirebase"
-                  class="btn btn-lg lmore btn-primary">
-                  Submit
-                </button>
-              </form>
+                <h5 class="card-title">By Mail</h5>
+                <p class="card-text">
+                  Prefer to send a check? Mail your check or Money Order to:
+                </p>
+                <address class="mt-auto mb-0">
+                  <strong>Impact for Mission</strong>
+                  <br />
+                  6100 Chevy Chase Drive
+                  <br />
+                  Suite 103 Laurel
+                  <br />
+                  MD 20707
+                  <br />
+                  <br />
+                  <p class="text-secondary small">
+                    Make check payable to “Impact for Mission”
+                  </p>
+                </address>
+              </div>
             </div>
           </div>
         </div>
@@ -852,6 +783,7 @@
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
