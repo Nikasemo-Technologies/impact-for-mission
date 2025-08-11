@@ -2,48 +2,47 @@
 <html>
   <head>
     <title>Christian Therapeutic Ministry</title>
-    <link
-    href="home.css"
-    rel="stylesheet"
-  />
+    <link href="home.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet" />
 
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
     <script src="https://use.fontawesome.com/fc6d352727.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text:ital@0;1&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet" />
     <!--  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.js"
-    ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.css" />
 
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
@@ -54,8 +53,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
 
     <script type="module">
-     
-
       // Your web app's Firebase configuration
       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
@@ -65,15 +62,15 @@
         storageBucket: "impact-for-missions.firebasestorage.app",
         messagingSenderId: "178209392285",
         appId: "1:178209392285:web:537eae20dc70845dc6f674",
-        measurementId: "G-S1G45WKR67"
+        measurementId: "G-S1G45WKR67",
       };
 
       // Initialize Firebase
-       // Initialize Firebase
-       firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const db = firebase.firestore();
-        db.settings({ timestampsInSnapshots: true });
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
     </script>
 
     <style type="text/css">
@@ -81,14 +78,18 @@
         background: rgba(255, 255, 255, 1);
         padding-top: 10px;
         padding-bottom: 10px;
-        box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
-        -webkit-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
-        -moz-box-shadow: 1px 1px 13px 3px rgba(0,0,0,0.1);
+        box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.1);
       }
 
       .blurred-background {
-        background: rgba(255, 255, 255, 1); /* Adjust color and opacity as needed */
-        
+        background: rgba(
+          255,
+          255,
+          255,
+          1
+        ); /* Adjust color and opacity as needed */
       }
 
       .navbar-brand1 {
@@ -298,7 +299,12 @@
         width: 10px; /* Adjust width as needed */
         height: 10px; /* Adjust height as needed */
         border-radius: 50%; /* Make them circular */
-        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Default background color */
       }
 
       .carousel-indicators .active {
@@ -306,172 +312,66 @@
       }
 
       .carousel-control-prev,
-.carousel-control-next {
-    top: auto;
-    bottom: 0;
-          width: 50px;
-          height: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
-          border-radius: 50%;
+      .carousel-control-next {
+        top: auto;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
       }
 
       .carousel-control-prev {
-          left: 20px;
-          bottom: 30px;
+        left: 20px;
+        bottom: 30px;
       }
 
       .carousel-control-next {
-          left: 80px;
-          bottom: 30px;
+        left: 80px;
+        bottom: 30px;
       }
 
       /* Optional: Adjust icon position within the button */
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-          width: 20px;
-          height: 20px;
+        width: 20px;
+        height: 20px;
       }
 
       @media only screen and (min-width: 100px) and (max-width: 600px) {
         .carousel-indicators {
-        position: absolute; /* Position indicators absolutely within the carousel */
-        left: -40px; /* Adjust the right position as needed */
-        top: 50%; /* Center vertically */
-        display: none;
-        transform: translateY(-50%); /* Adjust for vertical centering */
-        display: flex;
-        flex-direction: column; /* Make indicators vertical */
-        z-index: 1000; /* Ensure indicators are on top */
-      }
+          position: absolute; /* Position indicators absolutely within the carousel */
+          left: -40px; /* Adjust the right position as needed */
+          top: 50%; /* Center vertically */
+          display: none;
+          transform: translateY(-50%); /* Adjust for vertical centering */
+          display: flex;
+          flex-direction: column; /* Make indicators vertical */
+          z-index: 1000; /* Ensure indicators are on top */
+        }
 
-      .carousel-indicators li {
-        margin: 5px 0; /* Space between indicators */
-        width: 10px; /* Adjust width as needed */
-        height: 10px; /* Adjust height as needed */
-        border-radius: 50%; /* Make them circular */
-        background-color: rgba(255, 255, 255, 0.5); /* Default background color */
-      }
+        .carousel-indicators li {
+          margin: 5px 0; /* Space between indicators */
+          width: 10px; /* Adjust width as needed */
+          height: 10px; /* Adjust height as needed */
+          border-radius: 50%; /* Make them circular */
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.5
+          ); /* Default background color */
+        }
 
-      .carousel-indicators .active {
-        background-color: #ffffff; /* Active indicator color */
-      }
+        .carousel-indicators .active {
+          background-color: #ffffff; /* Active indicator color */
+        }
       }
     </style>
   </head>
 
-  <body style="font-family: 'Roboto', serif;">
-    <nav
-    class="navbar navbar-light navbar-expand-lg fixed-top navbackground dottt"
-    style="z-index: 99"
-  >
-    <div class="container navbodyhold" style="">
-      <a
-        class="navbar-brand1"
-        href="index.html"
-        style="color: #0047ab; font-family: 'Montserrat', sans-serif; text-align: center;"
-      >
-        <img
-          src="ctmlogo1.png"
-          class="img-fluid"
-          width="250px"
-          style="margin-right: 5px; margin-bottom: -7px;"
-        />
-       
-      </a>
-      <button
-        onclick="addNavBackground()"
-        class="navbar-toggler collapsed"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button> -->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          
-
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >HOME
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-              aria-haspopup="true" id="ourservices" aria-expanded="false">
-              ABOUT US
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="ourvision.html">VISION</a>
-              <a class="dropdown-item" href="who-we-serve.html">WHO WE SERVE</a>
-              <a class="dropdown-item" href="ourdirectors.html">DIRECTORS</a>
-            </div>
-          </li>
-        
-
-          <li class="nav-item">
-            <a class="nav-link" href="programs.html"
-              >OUR PROGRAMS
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" id="changecolor2" href="membership.html">
-              MEMBERSHIP
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="changecolor2" href="#!">
-              DONATE
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="changecolor2" href="blog.html">
-              BLOG
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="changecolor2" href="faqs.html">
-              FAQS
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="changecolor2" href="contactus.html">
-              CONTACT US
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://web.facebook.com/profile.php?id=61571194774764" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.youtube.com/@ChristianTherapeuticMinistry-I" target="blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <body style="font-family: 'Roboto', serif">
+    <div id="nav-placeholder"></div>
 
     <style type="text/css">
       .homeslider {
@@ -505,7 +405,7 @@
         padding-right: 40px;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: #F2F2F2;
+        background-color: #f2f2f2;
       }
 
       .homesect1 {
@@ -591,7 +491,7 @@
         border: none;
         background-color: #ffffff;
         border-radius: 6px;
-        
+
         margin-top: 10px;
         -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
         -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
@@ -613,50 +513,50 @@
       }
 
       .holdblogs {
-          padding: 40px;
-          background-color: #ffffff;
-        }
-
-        .innerblog {
-          padding: 40px;
-        }
-
-        .btnfons {
+        padding: 40px;
         background-color: #ffffff;
-        border: 2px solid #723E3E;
+      }
+
+      .innerblog {
+        padding: 40px;
+      }
+
+      .btnfons {
+        background-color: #ffffff;
+        border: 2px solid #723e3e;
         border-radius: 30px;
         color: #000;
         font-size: 14px;
       }
 
       .btnfons2 {
-        background-color: #723E3E;
-        border: 2px solid #723E3E;
+        background-color: #723e3e;
+        border: 2px solid #723e3e;
         border-radius: 30px;
         color: #ffffff;
         font-size: 14px;
       }
 
       .ctatextopen {
-        text-align: center; 
-        font-family: 'Bodoni Moda', serif; 
-        font-size: 35px; 
-        color: #723E3E;
+        text-align: center;
+        font-family: "Bodoni Moda", serif;
+        font-size: 35px;
+        color: #723e3e;
       }
 
       .btncustomlmore {
-          background-color: #ca8c3f;
-          border: none;
-          color: white;
-          font-size: 14px;
-          font-weight: 500;
+        background-color: #ca8c3f;
+        border: none;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
       }
 
       .hometoptext {
         font-family: "DM Serif Text", serif;
-        font-size: 60px; 
-        text-align: left; 
-       bottom: 150px; 
+        font-size: 60px;
+        text-align: left;
+        bottom: 150px;
         color: #ffffff;
       }
 
@@ -667,43 +567,43 @@
             rgba(11, 24, 201, 0.85)
           ),
           url("slider1.jpg");
-          padding: 30px;
-          position: relative;
-          height: 100vh;
+        padding: 30px;
+        position: relative;
+        height: 100vh;
       }
 
       .footer-content {
-          position: absolute; /* Position the footer content absolutely */
-          bottom: 70px; /* Align to the bottom */
-          width: 100%; /* Full width */
-        }
+        position: absolute; /* Position the footer content absolutely */
+        bottom: 70px; /* Align to the bottom */
+        width: 100%; /* Full width */
+      }
 
-        .sectprogone {
-          padding: 40px;
-        }
+      .sectprogone {
+        padding: 40px;
+      }
 
-        .holdProgramOne {
-          padding: 40px;
-        }
+      .holdProgramOne {
+        padding: 40px;
+      }
 
-        .hold-regis-form {
-          background-color: #cfcfcf;
-          padding: 20px;
-          border-radius: 25px;
-        }
+      .hold-regis-form {
+        background-color: #cfcfcf;
+        padding: 20px;
+        border-radius: 25px;
+      }
 
-        label {
-      font-weight: bold;
-      color: #0046b0;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
+      label {
+        font-weight: bold;
+        color: #0046b0;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
 
-    .joinmembutton {
-      background-color: #0046b0;
-      color: #ffffff;
-      border: none;
-    }
+      .joinmembutton {
+        background-color: #0046b0;
+        color: #ffffff;
+        border: none;
+      }
 
       @media only screen and (min-width: 100px) and (max-width: 600px) {
         .acttextbig {
@@ -734,7 +634,7 @@
 
         .holderservices {
           padding: 25px;
-          background-color: #F2F2F2;
+          background-color: #f2f2f2;
         }
 
         .holdblogs {
@@ -747,415 +647,307 @@
         }
 
         .btnfons {
-        background-color: #ffffff;
-        border: 2px solid #723E3E;
-        border-radius: 20px;
-        color: #000;
-        font-size: 10px;
-        margin-top: 30px;
-      }
+          background-color: #ffffff;
+          border: 2px solid #723e3e;
+          border-radius: 20px;
+          color: #000;
+          font-size: 10px;
+          margin-top: 30px;
+        }
 
-      .btnfons2 {
-        background-color: #723E3E;
-        border: 2px solid #723E3E;
-        border-radius: 20px;
-        color: #ffffff;
-        font-size: 14px;
-      }
+        .btnfons2 {
+          background-color: #723e3e;
+          border: 2px solid #723e3e;
+          border-radius: 20px;
+          color: #ffffff;
+          font-size: 14px;
+        }
 
-      .ctatextopen {
-        text-align: center; 
-        font-family: 'Bodoni Moda', serif; 
-        font-size: 25px; 
-        color: #723E3E;
-      }
+        .ctatextopen {
+          text-align: center;
+          font-family: "Bodoni Moda", serif;
+          font-size: 25px;
+          color: #723e3e;
+        }
       }
     </style>
 
-<section class="imagebg1">
-    <div class="container">
+    <section class="imagebg1">
+      <div class="container">
         <div class="row">
-            <div class="col-12 footer-content">
-                <h1 class="hometoptext">
-                  Train-Up a Child Program
-                </h1>
-                <p style="text-align: left; color: white;" class="">
-                  The Train-Up a Child Program is a Bible-based initiative focused on nurturing the next generation with Christlike character and values.
-                </p>
-            </div>
+          <div class="col-12 footer-content">
+            <h1 class="hometoptext">Train-Up a Child Program</h1>
+            <p style="text-align: left; color: white" class="">
+              The Train-Up a Child Program is a Bible-based initiative focused
+              on nurturing the next generation with Christlike character and
+              values.
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-
-<section class="holdProgramOne">
-  <div class="container">
-    <div class="row">
-    <div class="col-lg-7">
-      <div class="hold-details">
-        <h1 class="welc-title" style="text-align: left;">Train-Up a Child Program</h1>
-        <p style="line-height: 28px;">
-            The Train-Up a Child Program is a Bible-based initiative focused on nurturing the next generation 
-            with Christlike character and values. We believe that instilling strong spiritual and moral foundations 
-            in children and youth prepares them to make positive contributions to society and their communities.
-        </p>
-
-        <h3 class="welc-title" style="text-align: left;">Target Groups</h3>
-        <ul style="margin-left: 0; padding-left: 0; list-style: none; line-height: 28px;">
-            <li><span style="font-weight: 700; color: #0046b0;">Elementary School Children (Ages 8–10):</span> Building foundational Christian values and fostering curiosity about God's love.</li>
-            <li><span style="font-weight: 700; color: #0046b0;">Middle School Students:</span> Developing deeper understanding of scripture and practical ways to live a Christ-centered life.</li>
-            <li><span style="font-weight: 700; color: #0046b0;">High School Students:</span> Guiding students to navigate challenges, build integrity, and make faith-driven decisions.</li>
-        </ul>
-
-        <h3 class="welc-title" style="text-align: left;">Program Schedule</h3>
-        <ul style="margin-left: 0; padding-left: 0; list-style: none; line-height: 28px;">
-            <li><span style="font-weight: 700; color: #0046b0;">Wednesdays (Evening):</span> Sessions focus on Bible study, prayer, and interactive activities to strengthen understanding of God's Word.</li>
-            <li><span style="font-weight: 700; color: #0046b0;">Saturdays (Afternoon):</span> Workshops and group activities designed to promote teamwork, leadership, and application of Christian values.</li>
-        </ul>
-
-        <h3 class="welc-title" style="text-align: left;">How to Register</h3>
-        <p style="line-height: 28px;">
-            Parents must complete a consent/registration form to enroll their children. Once registered, a team member will 
-            provide further program details and schedules.
-        </p>
       </div>
-    </div>
-    <div class="col-lg-5">
-      <div class="hold-regis-form">
-        <h2 class="mb-4 welc-title">Register</h2>
-        <form id="registrationForm">
-          <!-- Full Name -->
-          <div class="form-group">
-            <label for="fullname">Full Name</label>
-            <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required>
-          </div>
+    </section>
 
-          <!-- Phone Number -->
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="phone" class="form-control" id="phonenumber" placeholder="Phone Number" required>
-          </div>
+    <section class="holdProgramOne">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="hold-details">
+              <h1 class="welc-title" style="text-align: left">
+                Train-Up a Child Program
+              </h1>
+              <p style="line-height: 28px">
+                The Train-Up a Child Program is a Bible-based initiative focused
+                on nurturing the next generation with Christlike character and
+                values. We believe that instilling strong spiritual and moral
+                foundations in children and youth prepares them to make positive
+                contributions to society and their communities.
+              </p>
 
-          <!-- Email -->
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-          </div>
+              <h3 class="welc-title" style="text-align: left">Target Groups</h3>
+              <ul
+                style="
+                  margin-left: 0;
+                  padding-left: 0;
+                  list-style: none;
+                  line-height: 28px;
+                ">
+                <li>
+                  <span style="font-weight: 700; color: #0046b0">
+                    Elementary School Children (Ages 8–10):
+                  </span>
+                  Building foundational Christian values and fostering curiosity
+                  about God's love.
+                </li>
+                <li>
+                  <span style="font-weight: 700; color: #0046b0">
+                    Middle School Students:
+                  </span>
+                  Developing deeper understanding of scripture and practical
+                  ways to live a Christ-centered life.
+                </li>
+                <li>
+                  <span style="font-weight: 700; color: #0046b0">
+                    High School Students:
+                  </span>
+                  Guiding students to navigate challenges, build integrity, and
+                  make faith-driven decisions.
+                </li>
+              </ul>
 
-          <!-- Age Group Dropdown -->
-          <div class="form-group">
-            <label for="ageGroup">Age Group</label>
-            <select class="form-control" id="ageGroup" required>
-              <option value="">Select your age group</option>
-              <option value="child">Child (6-12)</option>
-              <option value="teen">Teen (12-19)</option>
-              <option value="young-adult">Young Adult (20-35)</option>
-              <option value="adult">Adult (35-55)</option>
-              <option value="elder">Elder (55+)</option>
-            </select>
-          </div>
+              <h3 class="welc-title" style="text-align: left">
+                Program Schedule
+              </h3>
+              <ul
+                style="
+                  margin-left: 0;
+                  padding-left: 0;
+                  list-style: none;
+                  line-height: 28px;
+                ">
+                <li>
+                  <span style="font-weight: 700; color: #0046b0">
+                    Wednesdays (Evening):
+                  </span>
+                  Sessions focus on Bible study, prayer, and interactive
+                  activities to strengthen understanding of God's Word.
+                </li>
+                <li>
+                  <span style="font-weight: 700; color: #0046b0">
+                    Saturdays (Afternoon):
+                  </span>
+                  Workshops and group activities designed to promote teamwork,
+                  leadership, and application of Christian values.
+                </li>
+              </ul>
 
-          <!-- Interest Dropdown -->
-          <div class="form-group">
-            <label for="interest">Program Schedule</label>
-            <select class="form-control" id="interest" required>
-              <option value="">Select your time of availability</option>
-              <option value="wednesday-evening">Wednesdays (Evening)</option>
-              <option value="saturdays-afternoon">Saturdays (Afternoon)</option>
-            </select>
-          </div>
-
-          <!-- Message -->
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message (optional)"></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <p style="text-align: center;">
-            <button type="button" class="btn btn-primary btn-lg joinmembutton" id="submitButton">Submit</button>
-          </p>
-        </form>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-
-      <style type="text/css">
-        .foothead {
-          color: white;
-          font-weight: 500;
-          font-family: "Montserrat", sans-serif;
-        }
-  
-        .imagebg {
-          background-color: #d09e61;
-        }
-      </style>
-  
-      <footer class="py-5 imagebg">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <p style="text-align: center; margin-bottom: 20px;">
-                <img src="ctmlogo2.png" width="100px" height="100px" class="img-fluid"><br>
-                <span style="color: #ffffff; font-size: 25px; font-family: 'Bebas Neue', sans-serif;">Christian Therapeutic Ministry</span>
+              <h3 class="welc-title" style="text-align: left">
+                How to Register
+              </h3>
+              <p style="line-height: 28px">
+                Parents must complete a consent/registration form to enroll
+                their children. Once registered, a team member will provide
+                further program details and schedules.
               </p>
             </div>
-            <div class="col-lg-6">
-              <div class="innerfooter">
-                <h5 class="foothead">About Us</h5>
-                <ul style="list-style: none; padding-left: 0">
-                  <li>
-                    <a
-                      href="/"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      HOME</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="ourvision.html"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      VISION</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="programs.html"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      OUR PROGRAMS</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="ourevents.html"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      EVENTS</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="membership.html"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      MEMBERSHIP</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#!"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      DONATE</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="blog.html"
-                      
-                      style="
-                        color: white;
-                        font-weight: 300;
-                        font-size: 14px;
-                        text-decoration: none;
-                      "
-                    >
-                      BLOG</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-  
-            <div class="col-lg-6">
-              <div class="innerfooter">
-                <h5 class="foothead">Contact Us</h5>
-                <p style="color: white; font-size: 14px">
-                  <span
-                    ><i class="fa fa-envelope" aria-hidden="true"></i> Mailing
-                    Address</span
-                  ><br />
-                  <span style="font-weight: 300; font-size: 12px"
-                    >Post Office 60 Severn, MD 21144</span
-                  >
-                </p>
-  
-                <p style="color: white; font-size: 14px">
-                  <!-- <span><i class="fa fa-phone" aria-hidden="true"></i> Mobile: +1 (813) 365-9976</span><br>
-                <span><i class="fa fa-phone" aria-hidden="true"></i> Office: +1 (813) 365-9976</span><br> -->
-                  <span
-                    ><i class="fa fa-envelope" aria-hidden="true"></i> Email:
-                    info@impactformission.org</span
-                  ><br />
-                </p>
-  
-                <span
-                  ><a
-                    href="https://wa.me/message/6EYTHGZ4ZC5NG1"
-                    style="
-                      font-weight: 300;
-                      color: #ffffff;
-                      font-size: 13px;
-                      text-decoration: none;
-                    "
-                    
-                    ><i
-                      class="fa fa-whatsapp"
-                      style="color: white; margin-right: 5px"
-                      aria-hidden="true"
-                    ></i>
-                    WhatsApp Us</a
-                  ></span
-                >
-              </div>
-            </div>
-  
-            
           </div>
-          <div class="row" style="margin-top: 30px">
-            <div class="col-lg-12">
-              <p
-                class="m-0 text-white"
-                style="text-align: center; font-size: 14px"
-              >
-                Copyright &copy; Christian Therapeutic Ministry, 2025
-              </p>
-            </div>
-            <div class="col-lg-4">
-              <!--  <p class="m-0 text-white" style="text-align: right; font-size: 11px;">
-            Created By: <a style="font-weight: 300; color: yellow;" href="http://helpbusinessesonline.com" >
-              <img src="https://res.cloudinary.com/nikasemo/image/upload/v1515813123/logoforland_hke282.png" width="70px" height="45px"></a> 
-          </p> -->
+          <div class="col-lg-5">
+            <div class="hold-regis-form">
+              <h2 class="mb-4 welc-title">Register</h2>
+              <form id="registrationForm">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="fullname">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullname"
+                    placeholder="Enter your full name"
+                    required />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="phone"
+                    class="form-control"
+                    id="phonenumber"
+                    placeholder="Phone Number"
+                    required />
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email" />
+                </div>
+
+                <!-- Age Group Dropdown -->
+                <div class="form-group">
+                  <label for="ageGroup">Age Group</label>
+                  <select class="form-control" id="ageGroup" required>
+                    <option value="">Select your age group</option>
+                    <option value="child">Child (6-12)</option>
+                    <option value="teen">Teen (12-19)</option>
+                    <option value="young-adult">Young Adult (20-35)</option>
+                    <option value="adult">Adult (35-55)</option>
+                    <option value="elder">Elder (55+)</option>
+                  </select>
+                </div>
+
+                <!-- Interest Dropdown -->
+                <div class="form-group">
+                  <label for="interest">Program Schedule</label>
+                  <select class="form-control" id="interest" required>
+                    <option value="">Select your time of availability</option>
+                    <option value="wednesday-evening">
+                      Wednesdays (Evening)
+                    </option>
+                    <option value="saturdays-afternoon">
+                      Saturdays (Afternoon)
+                    </option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Enter your message (optional)"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <p style="text-align: center">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg joinmembutton"
+                    id="submitButton">
+                    Submit
+                  </button>
+                </p>
+              </form>
             </div>
           </div>
         </div>
-        <!-- /.container -->
-      </footer>
+      </div>
+    </section>
 
+    <style type="text/css">
+      .foothead {
+        color: white;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+      }
 
-    </div>
-  </div>
+      .imagebg {
+        background-color: #d09e61;
+      }
+    </style>
 
+    <div id="footer-placeholder"></div>
 
-      <script
+    <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
-    ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"
-    ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
     <script>
       AOS.init();
     </script>
     <script>
-
       function showAlert(message, type) {
-          // Remove any existing alerts
-          const existingAlert = document.querySelector('.alert');
-          if (existingAlert) {
-              existingAlert.remove();
-          }
-          
-          // Create new alert
-          const alertDiv = document.createElement('div');
-          alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
-          alertDiv.role = 'alert';
-          
-          alertDiv.innerHTML = `
+        // Remove any existing alerts
+        const existingAlert = document.querySelector(".alert");
+        if (existingAlert) {
+          existingAlert.remove();
+        }
+
+        // Create new alert
+        const alertDiv = document.createElement("div");
+        alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+        alertDiv.role = "alert";
+
+        alertDiv.innerHTML = `
               ${message}
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
               </button>
           `;
-          
-          // Insert alert before the form
-          const form = document.getElementById('registrationForm');
-          form.parentNode.insertBefore(alertDiv, form);
-          
-          // Auto dismiss after 5 seconds
-          setTimeout(() => {
-              alertDiv.classList.remove('show');
-              setTimeout(() => alertDiv.remove(), 150);
-          }, 5000);
+
+        // Insert alert before the form
+        const form = document.getElementById("registrationForm");
+        form.parentNode.insertBefore(alertDiv, form);
+
+        // Auto dismiss after 5 seconds
+        setTimeout(() => {
+          alertDiv.classList.remove("show");
+          setTimeout(() => alertDiv.remove(), 150);
+        }, 5000);
       }
-      document.getElementById('submitButton').addEventListener('click', async (e) => {
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", async (e) => {
           e.preventDefault();
-          
+
           // Get form elements
-          const fullname = document.getElementById('fullname').value.trim();
-          const email = document.getElementById('email').value.trim();
-          const phonenumber = document.getElementById('phonenumber').value.trim();
-          const ageGroup = document.getElementById('ageGroup').value;
-          const interest = document.getElementById('interest').value;
-          const message = document.getElementById('message').value.trim();
+          const fullname = document.getElementById("fullname").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phonenumber = document
+            .getElementById("phonenumber")
+            .value.trim();
+          const ageGroup = document.getElementById("ageGroup").value;
+          const interest = document.getElementById("interest").value;
+          const message = document.getElementById("message").value.trim();
           const programName = "Train Up A Child";
-          
+
           // Basic validation
           if (!fullname || !phonenumber || !ageGroup || !interest) {
-             showAlert('Please fill in all required fields', 'danger');
+            showAlert("Please fill in all required fields", "danger");
             return;
           }
-          
+
           // Email validation
           // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           // if (!emailRegex.test(email)) {
@@ -1163,53 +955,62 @@
           //   return;
           // }
 
-          const submitButton = document.getElementById('submitButton');
-              submitButton.disabled = true;
-              submitButton.textContent = 'Submitting...';
-          
+          const submitButton = document.getElementById("submitButton");
+          submitButton.disabled = true;
+          submitButton.textContent = "Submitting...";
+
           try {
-              // Disable submit button to prevent double submission
-              
-              
-              // Prepare data object
-              const formData = {
-                  fullname,
-                  email,
-                  phonenumber,
-                  ageGroup,
-                  interest,
-                  message,
-                  createdAt: new Date(),
-                  status: 'new',
-                  type: 'events-train-up-a-child'
-              };
-              
-              // Add document to Firestore
-              firebase.firestore().collection("leads").add(formData)
-                  .then((docRef) => {
-                    //  alert("Successfully Submitted")
-                      console.log("Document written with ID: ", docRef.id);
-                      document.getElementById('registrationForm').reset();
-                      showAlert(`Thank you for registering for the ${programName}! We will contact you shortly with more information.`, 'success');
-            
-                  })
-                  .catch((error) => {
-                      console.error('Error submitting form:', error);
-                      showAlert('An error occurred while submitting your registration. Please try again later.', 'danger');
-                  });
-              
+            // Disable submit button to prevent double submission
+
+            // Prepare data object
+            const formData = {
+              fullname,
+              email,
+              phonenumber,
+              ageGroup,
+              interest,
+              message,
+              createdAt: new Date(),
+              status: "new",
+              type: "events-train-up-a-child",
+            };
+
+            // Add document to Firestore
+            firebase
+              .firestore()
+              .collection("leads")
+              .add(formData)
+              .then((docRef) => {
+                //  alert("Successfully Submitted")
+                console.log("Document written with ID: ", docRef.id);
+                document.getElementById("registrationForm").reset();
+                showAlert(
+                  `Thank you for registering for the ${programName}! We will contact you shortly with more information.`,
+                  "success",
+                );
+              })
+              .catch((error) => {
+                console.error("Error submitting form:", error);
+                showAlert(
+                  "An error occurred while submitting your registration. Please try again later.",
+                  "danger",
+                );
+              });
           } catch (error) {
-              console.error('Error submitting form:', error);
-              showAlert('An error occurred while submitting your information. Please try again later.', 'danger');
-             // alert('An error occurred. Please try again later.');
-              
+            console.error("Error submitting form:", error);
+            showAlert(
+              "An error occurred while submitting your information. Please try again later.",
+              "danger",
+            );
+            // alert('An error occurred. Please try again later.');
           } finally {
-              // Re-enable submit button
-              const submitButton = document.getElementById('submitButton');
-              submitButton.disabled = false;
-              submitButton.textContent = 'Submit';
+            // Re-enable submit button
+            const submitButton = document.getElementById("submitButton");
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit";
           }
-      });
+        });
     </script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
