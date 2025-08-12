@@ -3,8 +3,7 @@
   <head>
     <title>Christian Therapeutic Ministry</title>
     <link href="home.css" rel="stylesheet" />
-    <link rel="icon" href="ctmlogo2.png">
-    <link rel="icon" href="ctmlogo2.png">
+    <link rel="icon" href="ctmlogo2.png" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -276,9 +275,6 @@
     </style>
 
     <style>
-      html {
-        scroll-behavior: smooth !important;
-      }
       /* Add this CSS to style the carousel indicators */
       .carousel {
         position: relative; /* Ensure the carousel is the positioning context */
@@ -372,6 +368,7 @@
 
   <body style="font-family: 'Roboto', serif">
     <div id="nav-placeholder"></div>
+
     <style type="text/css">
       .homeslider {
         margin-top: 0px;
@@ -553,9 +550,9 @@
 
       .hometoptext {
         font-family: "DM Serif Text", serif;
-        font-size: 60px;
-        text-align: left;
-        bottom: 150px;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 200px;
         color: #ffffff;
       }
 
@@ -565,10 +562,12 @@
             rgba(5, 7, 158, 0.5),
             rgba(11, 24, 201, 0.85)
           ),
-          url("cc11.jpg");
+          url("cc1.jpeg");
         padding: 30px;
-        position: relative;
-        height: 100vh;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .footer-content {
@@ -577,13 +576,28 @@
         width: 100%; /* Full width */
       }
 
-      .firstsect {
-        padding: 40px;
+      .holdcontactbody {
+        padding: 60px;
       }
 
-      .holdvision {
+      .profile-card {
+        max-width: 350px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .profile-card-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 30px auto;
+        display: block;
+      }
+
+      .btn-proper-blue {
         background-color: #0046b0;
-        width: 100%;
+        border: #0046b0;
         color: #ffffff;
       }
 
@@ -652,313 +666,150 @@
           color: #723e3e;
         }
       }
+      .kingdom-partnership-section .features-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .kingdom-partnership-section .features-list li {
+        position: relative;
+        padding-left: 28px; /* Space for the checkmark icon */
+        margin-bottom: 1rem;
+      }
+
+      .kingdom-partnership-section .features-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        /* SVG Checkmark Icon (URL-encoded) */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%230046b0'%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/%3e%3c/svg%3e");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .kingdom-partnership-section .cta-box {
+        border: 1px solid #dee2e6;
+        border-left-width: 5px;
+        border-left-color: #0046b0; /* Your brand color */
+      }
     </style>
 
     <section class="imagebg1">
       <div class="container">
         <div class="row">
-          <div class="col-12 footer-content">
-            <h1 class="hometoptext">Our Vision</h1>
-            <p style="text-align: left; color: white" class="">
-              Discover the transformative power of faith and science. Join our
-              mission to inspire purpose and achieve balance in all aspects of
-              life.
-            </p>
+          <div class="col-12">
+            <h4 class="hometoptext">Kingdom Partnership</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---OLD ABOUT SECTION--- -->
-    <!-- <section class="aboutSec">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <br />
-            <h1 class="welc-title">Empowering Lives for Holistic Health</h1>
-            <p class="welc-descrip">
-              Discover the transformative power of faith and science. Join our
-              mission to inspire purpose
-              <br />
-              and achieve balance in all aspects of life.
+    <section>
+      <!-- ============================================ -->
+      <!--       KINGDOM PARTNERSHIP SECTION            -->
+      <!-- ============================================ -->
+      <div class="container py-5 kingdom-partnership-section">
+        <!-- PART 1: INTRODUCTION -->
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-9">
+            <h2 class="font-weight-bold">Become a Kingdom Partner</h2>
+            <p class="lead">
+              At Christian Therapeutic Ministry, we believe the Great Commission
+              cannot be fulfilled alone—we must work together as the Body of
+              Christ (1 Corinthians 12:12–27).
+            </p>
+            <p>
+              That’s why we partner with churches, businesses, and health
+              organizations to bring healing, hope, and transformation through
+              professional spiritual care and holistic training.
             </p>
           </div>
         </div>
-        <div class="row" style="margin-top: 30px">
+
+        <!-- PART 2: A TWO-WAY PARTNERSHIP -->
+        <div class="row align-items-center mb-5">
+          <!-- Column 1: What We Offer -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="p-4">
+              <h4 class="font-weight-bold mb-4">What We Offer Our Partners</h4>
+              <p>
+                As a Kingdom Partner, your ministry or organization will receive
+                access to professional services led by board-certified
+                chaplains:
+              </p>
+              <ul class="features-list mt-4">
+                <li>
+                  Pastoral and Spiritual Counseling for your members or staff
+                </li>
+                <li>Scheduled Holistic Health Webinars and Trainings</li>
+                <li>
+                  Resiliency and Emotional Wellness Training for leaders and
+                  teams
+                </li>
+                <li>Evangelism and Discipleship Training</li>
+                <li>Ministry Consulting and Leadership Development</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Column 2: The Impact You Make -->
           <div class="col-lg-6">
-            <h3 class="card-title c-pt mb-3" style="color: #0046b0">
-              Welcome to Impact for Mission
-            </h3>
-            <p class="card-text" style="color: #000000">
-              At Christian Therapeutic Ministry: Impact for Mission, our purpose
-              is to inspire and empower individuals to live purpose-driven lives
-              through holistic health. Rooted in faith and science, we integrate
-              spiritual, emotional, and practical tools to foster transformation
-              and healing.
-              <br />
-              <br />
-              Our mission is grounded in the belief that true well-being comes
-              from addressing all aspects of life—spiritual, emotional, mental,
-              and physical. By combining Christian principles with
-              evidence-based therapeutic practices, we equip our members with
-              the resources needed to thrive and make a positive impact in their
-              communities.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <div class="holdvision">
-              <h3 class="card-title c-pt mb-3">Purpose:</h3>
-              <p class="card-text">
-                To inspire and empower members to achieve their mission.
-              </p>
-            </div>
-            <div class="holdvision" style="margin-top: 30px">
-              <h3 class="card-title c-pt mb-3">Vision:</h3>
-              <p class="card-text">
-                To create a supportive and transformative community where
-                individuals are empowered to live purposefully, touching lives
-                and influencing their spheres for the better.
+            <div class="p-4 bg-light rounded text-center">
+              <!-- Heart SVG Icon -->
+              <svg
+                class="text-primary mb-3"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                width="48"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false">
+                <path
+                  d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+              </svg>
+              <h4 class="font-weight-bold">Invest in a Greater Mission</h4>
+              <p class="lead">
+                By becoming a Kingdom Partner, you are not just receiving expert
+                care—you are also investing in our
+                <strong>Orphan Care Mission in Togo and Ghana</strong>
+                , helping vulnerable children receive the love, stability, and
+                future they deserve through family-based support.
               </p>
             </div>
           </div>
         </div>
-        <div class="row" style="margin-top: 50px">
-          <div class="col-lg-12">
-            <br />
-            <br />
-            <h2
-              style="
-                text-align: center;
-                font-family: 'DM Serif Text', serif;
-                color: #0046b0;
-              ">
-              Holistic Health Cycle Model
-            </h2>
-            <p style="text-align: center">
-              <br />
-              <img
-                src="mindfulness-circle-3.png"
-                class="img-fluid"
-                width="550px" />
-            </p>
-            <p style="text-align: center">
-              <img
-                src="holistic-health-line.png"
-                class="img-fluid"
-                width="800px" />
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
-    <section class="aboutSec">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <br />
-            <h1 class="welc-title">Empowering Lives for Holistic Health</h1>
-            <p class="welc-descrip">
-              Discover the transformative power of faith and science. Join our
-              mission to inspire purpose
-              <br />
-              and achieve balance in all aspects of life.
-            </p>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 30px">
-          <div class="col-lg-4">
-            <h3 class="card-title c-pt mb-3" style="color: #0046b0">
-              Welcome to Impact for Mission
-            </h3>
-            <p class="card-text" style="color: #000000">
-              Christian Therapeutic Ministry (CTM) exists to promote healing,
-              restoration, and purpose through the power of faith and holistic
-              care. Our vision is to see individuals, families, and communities
-              thrive—spiritually, emotionally, and physically—by integrating
-              biblical truth with practical support.
-            </p>
-          </div>
-          <div class="col-lg-8">
-            <div class="">
-              <h5 class="c-pt mb-1 text-center" style="color: #0046b0">
-                Our Mission Is Threefold
-              </h5>
-              <p class="small text-center">
-                At CTM, we believe healing is not just individual—it is
-                generational, global, and rooted in the Gospel.
+        <!-- PART 3: FINAL CALL TO ACTION -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div
+              class="cta-box p-4 p-md-5 text-center bg-white rounded shadow-sm">
+              <h3 class="font-weight-bold">Let Us Build Together</h3>
+              <p class="lead my-3">
+                We invite you to collaborate with us—strengthen your community
+                while transforming lives across Africa.
               </p>
-              <!-- Row for the three mission cards -->
-              <div class="row">
-                <!-- Card 1: Holistic Health -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 text-center mission-card holdvision">
-                    <div class="card-body">
-                      <div class="mb-3"></div>
-                      <h6 class="card-title font-weight-bold">
-                        Holistic Health Awareness & Teachings
-                      </h6>
-                      <p class="card-text small">
-                        We educate and equip individuals with faith-based tools
-                        for emotional, mental, and spiritual wellness through
-                        webinars, training sessions, and pastoral care.
-                      </p>
-                      <!-- This link makes the whole card clickable. Update the href! -->
-                      <a
-                        href="#holistic-health"
-                        class="stretched-link"
-                        aria-label="Learn more about Holistic Health Awareness"></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 2: Kingdom Partnership -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 text-center mission-card holdvision">
-                    <div class="card-body">
-                      <div class="mb-3"></div>
-                      <h6 class="card-title font-weight-bold">
-                        Kingdom Partnership with Ministries & Organizations
-                      </h6>
-                      <p class="card-text small">
-                        We collaborate with churches and institutions by
-                        offering professional chaplaincy care, resiliency
-                        training, and spiritual consulting.
-                        <a style="color: #f9c78b">Read More..</a>
-                      </p>
-                      <!-- This link makes the whole card clickable. Update the href! -->
-                      <a
-                        href="kingdom.html"
-                        class="stretched-link"
-                        aria-label="Learn more about Kingdom Partnerships"></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 3: Orphan Care -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 text-center mission-card holdvision">
-                    <div class="card-body">
-                      <div class="mb-3"></div>
-                      <h6 class="card-title font-weight-bold">
-                        Impact-Oriented Orphan Care Mission
-                      </h6>
-                      <p class="card-text small">
-                        We support vulnerable children in Togo and Ghana through
-                        family-based care, education, healthcare, and spiritual
-                        guidance.
-                        <a style="color: #f9c78b">Read More..</a>
-                      </p>
-                      <!-- This link makes the whole card clickable. Update the href! -->
-                      <a
-                        href="orphanage.html"
-                        class="stretched-link"
-                        aria-label="Learn more about our Orphan Care Mission"></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- / Row for the three mission cards -->
+              <a
+                href="forms/CTM-Kingdom-Partnership-Request-Form.docx"
+                class="btn btn-primary btn-lg mt-3">
+                Become a Kingdom Partner
+              </a>
+              <p class="mt-4 mb-0">
+                <strong>Contact:</strong>
+                impactformission@gmail.com | 757-305-8433
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <!-- ============================================ -->
+      <!--               END OF SECTION                 -->
+      <!-- ============================================ -->
     </section>
-
-    <section id="holistic-health" style="padding-top: 30px">
-      <div class="container">
-        <div class="row" style="margin-top: 50px">
-          <div class="col-lg-12">
-            <br />
-            <br />
-            <h2
-              style="
-                text-align: center;
-                font-family: 'DM Serif Text', serif;
-                color: #0046b0;
-              ">
-              Holistic Health Cycle Model
-            </h2>
-            <p style="text-align: center">
-              <br />
-              <img
-                src="mindfulness-circle-3.png"
-                class="img-fluid"
-                width="550px" />
-            </p>
-            <p style="text-align: center">
-              <img
-                src="holistic-health-line.png"
-                class="img-fluid"
-                width="800px" />
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <br />
-            <h1 class="welc-title">Statement of Faith</h1>
-            <p
-              class="welc-descrip"
-              style="
-                margin-top: 20px;
-                margin-bottom: 0px;
-                font-family: 'DM Serif Text', serif;
-                font-size: 24px;
-              ">
-              1. Believe in Jesus.
-            </p>
-            <p style="text-align: center">
-              We affirm that Jesus Christ is the only way to eternal life, based
-              on John 3:16: &quot;For God so loved the world that he gave his
-              one and only Son, that whoever believes in him shall not perish
-              but have eternal life.”
-            </p>
-            <p
-              class="welc-descrip"
-              style="
-                margin-top: 20px;
-                margin-bottom: 0px;
-                font-family: 'DM Serif Text', serif;
-                font-size: 24px;
-              ">
-              2. Bible
-            </p>
-            <p style="text-align: center">
-              We believe in the authority and inerrancy of the Bible, as taught
-              in 2 Timothy 3:16: &quot;All Scripture is God-breathed and is
-              useful for teaching, rebuking, correcting, and training in
-              righteousness.”
-            </p>
-            <p
-              class="welc-descrip"
-              style="
-                margin-top: 20px;
-                margin-bottom: 0px;
-                font-family: 'DM Serif Text', serif;
-                font-size: 24px;
-              ">
-              3. Holistic Health
-            </p>
-            <p style="text-align: center">
-              We support a holistic approach to well-being that integrates
-              physical, mental, emotional, and spiritual health. This aligns
-              with 1 Thessalonians 5:23: &quot;May God himself, the God of
-              peace, sanctify you through and through. May your whole spirit,
-              soul, and body be kept blameless at the coming of our Lord Jesus
-              Christ."
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="firstsect"></section>
 
     <style type="text/css">
       .foothead {
