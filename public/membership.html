@@ -3,7 +3,7 @@
   <head>
     <title>Christian Therapeutic Ministry</title>
     <link href="home.css" rel="stylesheet" />
-    <link rel="icon" href="ctmlogo2.png">
+    <link rel="icon" href="ctmlogo2.png" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -44,33 +44,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.4/trix.css" />
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-                https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
-
-    <script type="module">
-      const firebaseConfig = {
-        apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
-        authDomain: "impact-for-missions.firebaseapp.com",
-        projectId: "impact-for-missions",
-        storageBucket: "impact-for-missions.firebasestorage.app",
-        messagingSenderId: "178209392285",
-        appId: "1:178209392285:web:537eae20dc70845dc6f674",
-        measurementId: "G-S1G45WKR67",
-      };
-
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      const db = firebase.firestore();
-      db.settings({ timestampsInSnapshots: true });
-    </script>
-    <script src="app.js"></script>
 
     <style type="text/css">
       .navbackground {
@@ -276,273 +249,12 @@
         }
       }
     </style>
-
-    <style>
-      /* Add this CSS to style the carousel indicators */
-      .carousel {
-        position: relative; /* Ensure the carousel is the positioning context */
-      }
-
-      .carousel-indicators {
-        position: absolute; /* Position indicators absolutely within the carousel */
-        left: 1100px; /* Adjust the right position as needed */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Adjust for vertical centering */
-        display: flex;
-        flex-direction: column; /* Make indicators vertical */
-        z-index: 1000; /* Ensure indicators are on top */
-      }
-
-      .carousel-indicators li {
-        margin: 5px 0; /* Space between indicators */
-        width: 10px; /* Adjust width as needed */
-        height: 10px; /* Adjust height as needed */
-        border-radius: 50%; /* Make them circular */
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.5
-        ); /* Default background color */
-      }
-
-      .carousel-indicators .active {
-        background-color: #ffffff; /* Active indicator color */
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        top: auto;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-      }
-
-      .carousel-control-prev {
-        left: 20px;
-        bottom: 30px;
-      }
-
-      .carousel-control-next {
-        left: 80px;
-        bottom: 30px;
-      }
-
-      /* Optional: Adjust icon position within the button */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-      }
-
-      @media only screen and (min-width: 100px) and (max-width: 600px) {
-        .carousel-indicators {
-          position: absolute; /* Position indicators absolutely within the carousel */
-          left: -40px; /* Adjust the right position as needed */
-          top: 50%; /* Center vertically */
-          display: none;
-          transform: translateY(-50%); /* Adjust for vertical centering */
-          display: flex;
-          flex-direction: column; /* Make indicators vertical */
-          z-index: 1000; /* Ensure indicators are on top */
-        }
-
-        .carousel-indicators li {
-          margin: 5px 0; /* Space between indicators */
-          width: 10px; /* Adjust width as needed */
-          height: 10px; /* Adjust height as needed */
-          border-radius: 50%; /* Make them circular */
-          background-color: rgba(
-            255,
-            255,
-            255,
-            0.5
-          ); /* Default background color */
-        }
-
-        .carousel-indicators .active {
-          background-color: #ffffff; /* Active indicator color */
-        }
-      }
-    </style>
   </head>
 
   <body style="font-family: 'Roboto', serif">
     <div id="nav-placeholder"></div>
 
     <style type="text/css">
-      .homeslider {
-        margin-top: 0px;
-      }
-
-      .carousel {
-        position: relative;
-        top: 0px;
-      }
-
-      .acttextbig {
-        color: white;
-        margin-top: 0px;
-        font-weight: 600;
-        font-size: 55px;
-        text-align: left;
-        font-family: "DM Serif Text", serif;
-      }
-
-      .homeheadbigtext {
-        color: #6a2f1e;
-        margin-top: 0px;
-        font-weight: 500;
-        font-size: 40px;
-        text-align: left;
-      }
-
-      .holderservices {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f2f2f2;
-      }
-
-      .homesect1 {
-        padding: 60px;
-        background-color: #ffffff;
-      }
-
-      .carousel-item {
-        min-height: 700px;
-        background: no-repeat center center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-
-      .carousel-inner {
-        position: relative;
-        width: 100%;
-        height: 700px;
-        overflow: hidden;
-      }
-
-      .carousel-caption {
-        position: absolute;
-        right: 5%;
-        bottom: 100px;
-        left: 15%;
-        z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: right;
-        color: #fff;
-        text-align: center;
-      }
-
-      .capttxt {
-        color: #ffffff;
-        font-size: 35px;
-        font-weight: 500;
-        font-family: "Exo 2", sans-serif;
-        text-align: right;
-      }
-
-      .rmore {
-        font-size: 18px;
-        font-weight: 600;
-        color: #ffffff;
-        background-color: #ffb70a;
-        border: none;
-        border-radius: 2px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin-top: 10px;
-        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-      }
-
-      .ctact {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        border: none;
-        background-color: #ffffff;
-        border-radius: 2px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin-top: 10px;
-        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-      }
-
-      .ctact2 {
-        font-size: 13px;
-        font-weight: 600;
-        color: #000000;
-        border: none;
-        background-color: #ffffff;
-        border-radius: 6px;
-
-        margin-top: 10px;
-        -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.45);
-      }
-
-      .lmore {
-        font-size: 16px;
-        font-weight: 600;
-        color: #ffffff;
-        background-color: #000000;
-        width: 100%;
-        border: none;
-        border-radius: 2px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-      }
-
-      .holdblogs {
-        padding: 40px;
-        background-color: #ffffff;
-      }
-
-      .innerblog {
-        padding: 40px;
-      }
-
-      .btnfons {
-        background-color: #ffffff;
-        border: 2px solid #723e3e;
-        border-radius: 30px;
-        color: #000;
-        font-size: 14px;
-      }
-
-      .btnfons2 {
-        background-color: #723e3e;
-        border: 2px solid #723e3e;
-        border-radius: 30px;
-        color: #ffffff;
-        font-size: 14px;
-      }
-
-      .ctatextopen {
-        text-align: center;
-        font-family: "Bodoni Moda", serif;
-        font-size: 35px;
-        color: #723e3e;
-      }
-
       .btncustomlmore {
         background-color: #ca8c3f;
         border: none;
@@ -576,92 +288,6 @@
       .membershipbg {
         background-color: #ffffff;
       }
-
-      .holdform {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 150px;
-        padding-bottom: 40px;
-      }
-
-      label {
-        font-weight: bold;
-        color: #0046b0;
-        font-size: 14px;
-        margin-bottom: 5px;
-      }
-
-      .joinmembutton {
-        background-color: #0046b0;
-        color: #ffffff;
-        border: none;
-      }
-
-      @media only screen and (min-width: 100px) and (max-width: 600px) {
-        .acttextbig {
-          color: white;
-          margin-top: 0px;
-          font-weight: 600;
-          font-size: 35px;
-          text-align: left;
-          font-family: "Bodoni Moda", serif;
-        }
-
-        .subtee2 {
-          font-size: 14px;
-        }
-
-        .homeheadbigtext {
-          color: #6a2f1e;
-          margin-top: 0px;
-          font-weight: 500;
-          font-size: 25px;
-          text-align: left;
-        }
-
-        .homesect1 {
-          padding: 25px;
-          background-color: #ffffff;
-        }
-
-        .holderservices {
-          padding: 25px;
-          background-color: #f2f2f2;
-        }
-
-        .holdblogs {
-          padding: 25px;
-          background-color: #ffffff;
-        }
-
-        .innerblog {
-          padding: 20px;
-        }
-
-        .btnfons {
-          background-color: #ffffff;
-          border: 2px solid #723e3e;
-          border-radius: 20px;
-          color: #000;
-          font-size: 10px;
-          margin-top: 30px;
-        }
-
-        .btnfons2 {
-          background-color: #723e3e;
-          border: 2px solid #723e3e;
-          border-radius: 20px;
-          color: #ffffff;
-          font-size: 14px;
-        }
-
-        .ctatextopen {
-          text-align: center;
-          font-family: "Bodoni Moda", serif;
-          font-size: 25px;
-          color: #723e3e;
-        }
-      }
     </style>
 
     <section class="membershipbg">
@@ -688,14 +314,16 @@
         </div>
         <div class="download-section"></div>
         <div class="col-lg-6">
-          <div class="container py-5"><br />
-          <br />
-          <br />
-          <br />
+          <div class="container py-5">
+            <br />
+            <br />
+            <br />
+            <br />
+
             <!-- Section Header -->
             <div class="row mb-4">
               <div class="col text-center">
-                <h2>Downloadable Forms</h2>
+                <h2>Membership Forms</h2>
                 <p class="lead text-muted">
                   Access key documents for our programs. Click to download the
                   form you need.
@@ -712,13 +340,13 @@
                     <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
                     <h5 class="card-title">Spiritual Counseling Form</h5>
 
-                    <!-- IMPORTANT: Replace the href with the actual path to your PDF or document -->
-                    <a
-                      href="forms/CTM-Spiritual-Counseling-Request-Form.docx"
+                    <button
+                      type="button"
                       class="btn btncustomlmore mt-auto"
-                      download>
-                      Download 
-                    </a>
+                      data-toggle="modal"
+                      data-target="#spiritualCounselingModal">
+                      Fill Out Form
+                    </button>
                   </div>
                 </div>
               </div>
@@ -730,13 +358,13 @@
                     <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
                     <h5 class="card-title">Kingdom Partnership Form</h5>
 
-                    <!-- IMPORTANT: Replace the href with the actual path to your PDF or document -->
-                    <a
-                      href="forms/CTM-Kingdom-Partnership-Request-Form.docx"
+                    <button
+                      type="button"
                       class="btn btncustomlmore mt-auto"
-                      download>
-                      Download 
-                    </a>
+                      data-toggle="modal"
+                      data-target="#kingdomPartnershipModal">
+                      Fill Out Form
+                    </button>
                   </div>
                 </div>
               </div>
@@ -748,107 +376,20 @@
                     <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
                     <h5 class="card-title">Child Sponsorship Form</h5>
 
-                    <!-- IMPORTANT: Replace the href with the actual path to your PDF or document -->
-                    <a
-                      href="forms/CTM-Sponsorship-Form.docx"
+                    <button
+                      type="button"
                       class="btn btncustomlmore mt-auto"
-                      download>
-                      Download
-                    </a>
+                      data-toggle="modal"
+                      data-target="#childSponsorshipModal">
+                      Fill Out Form
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+            <div id="form-alert-container" style="margin-top: 30px;"></div>
           </div>
         </div>
-        <!-- <div class="col-lg-6">
-          <div class="holdform">
-            <h2 class="mb-4 welc-title">Become A Member</h2>
-            <form id="registrationForm">
-             
-              <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="fullname"
-                  placeholder="Enter your full name"
-                  required />
-              </div>
-
-             
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="phone"
-                  class="form-control"
-                  id="phonenumber"
-                  placeholder="Phone Number"
-                  required />
-              </div>
-
-             
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter your email" />
-              </div>
-
-             
-              <div class="form-group">
-                <label for="ageGroup">Age Group</label>
-                <select class="form-control" id="ageGroup" required>
-                  <option value="">Select your age group</option>
-                  <option value="child">Child (6-12)</option>
-                  <option value="teen">Teen (12-19)</option>
-                  <option value="young-adult">Young Adult (20-35)</option>
-                  <option value="adult">Adult (35-55)</option>
-                  <option value="elder">Elder (55+)</option>
-                </select>
-              </div>
-
-              
-              <div class="form-group">
-                <label for="interest">Interest</label>
-                <select class="form-control" id="interest" required>
-                  <option value="">Select your area of interest</option>
-                  <option value="train-up-child">
-                    Train-Up a Child Program
-                  </option>
-                  <option value="moral-injury">
-                    Moral Injury/PTSD/Mental Health Spirituality Group
-                  </option>
-                  <option value="whole-health-webinar">
-                    Holistic Health Webinar
-                  </option>
-                </select>
-              </div>
-
-             
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="4"
-                  placeholder="Enter your message (optional)"></textarea>
-              </div>
-
-             
-              <p style="text-align: center">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-lg joinmembutton"
-                  id="submitButton">
-                  Submit
-                </button>
-              </p>
-            </form>
-          </div>
-        </div> -->
       </div>
     </section>
 
@@ -885,145 +426,1058 @@
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+
+    <!-- =================================================================== -->
+    <!--                          MODALS START HERE                          -->
+    <!-- =================================================================== -->
+
+    <!-- Modal 1: Spiritual Counseling -->
+    <div
+      class="modal fade"
+      id="spiritualCounselingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="spiritualCounselingModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="spiritualCounselingModalLabel">
+              Spiritual Counseling Form
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Spiritual Counseling Form START -->
+            <form id="spiritualCounselingForm" novalidate>
+              <p class="mb-3">
+                Please complete the form below to request a consultation. All
+                information will be kept confidential.
+              </p>
+
+              <h5 class="mt-4">Personal Information</h5>
+              <hr />
+
+              <div class="form-group">
+                <label for="scf-fullName">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="scf-fullName"
+                  required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="scf-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="scf-phone"
+                    required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="scf-email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="scf-email"
+                    required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Preferred Method of Contact</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="scf-contactMethod"
+                    id="scf-contact-phone"
+                    value="Phone"
+                    checked />
+                  <label class="form-check-label" for="scf-contact-phone">
+                    Phone
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="scf-contactMethod"
+                    id="scf-contact-email"
+                    value="Email" />
+                  <label class="form-check-label" for="scf-contact-email">
+                    Email
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="scf-contactMethod"
+                    id="scf-contact-text"
+                    value="Text" />
+                  <label class="form-check-label" for="scf-contact-text">
+                    Text
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="scf-address">Address (Optional)</label>
+                <textarea
+                  class="form-control"
+                  id="scf-address"
+                  rows="2"></textarea>
+              </div>
+
+              <h5 class="mt-4">Counseling Needs</h5>
+              <hr />
+              <div class="form-group">
+                <label>
+                  Please check the area(s) where you are seeking support:
+                </label>
+                <!-- Checkboxes for Counseling Needs -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Grief or Loss"
+                    id="scf-need-grief" />
+                  <label class="form-check-label" for="scf-need-grief">
+                    Grief or Loss Counseling
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Marriage/Relationship"
+                    id="scf-need-marriage" />
+                  <label class="form-check-label" for="scf-need-marriage">
+                    Marriage or Relationship Counseling
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Premarital/Post-marital"
+                    id="scf-need-premarital" />
+                  <label class="form-check-label" for="scf-need-premarital">
+                    Premarital or Post-marital Counseling
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Spiritual Growth"
+                    id="scf-need-growth" />
+                  <label class="form-check-label" for="scf-need-growth">
+                    Spiritual Growth and Guidance
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Stress/Anxiety"
+                    id="scf-need-stress" />
+                  <label class="form-check-label" for="scf-need-stress">
+                    Stress, Anxiety, or Burnout
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Life Transition"
+                    id="scf-need-transition" />
+                  <label class="form-check-label" for="scf-need-transition">
+                    Life Transition or Decision-Making
+                  </label>
+                </div>
+                <div class="form-check form-inline mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="scf-needs"
+                    value="Other"
+                    id="scf-need-other" />
+                  <label class="form-check-label" for="scf-need-other">
+                    Other (please specify):
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm ml-2"
+                    id="scf-need-other-specify" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="scf-concern">Brief Description of Concern</label>
+                <textarea
+                  class="form-control"
+                  id="scf-concern"
+                  rows="3"
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="scf-availability">
+                  Preferred Days/Times for Consultation
+                </label>
+                <input type="text" class="form-control" id="scf-availability" />
+              </div>
+
+              <div
+                class="alert alert-secondary mt-4"
+                role="alert"
+                style="font-size: 0.9em">
+                <strong>Consent and Agreement:</strong>
+                I understand that this service is pastoral in nature and is not
+                a substitute for licensed mental health therapy. I agree to be
+                contacted by a representative from Christian Therapeutic
+                Ministry to arrange a consultation.
+              </div>
+            </form>
+            <!-- Spiritual Counseling Form END -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="submit"
+              id="scf-submitBtn"
+              form="spiritualCounselingForm"
+              class="btn btn-primary">
+              Submit Form
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Kingdom Partnership -->
+    <div
+      class="modal fade"
+      id="kingdomPartnershipModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="kingdomPartnershipModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="kingdomPartnershipModalLabel">
+              Kingdom Partnership Form
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Kingdom Partnership Form START -->
+            <form id="kingdomPartnershipForm" novalidate>
+              <p class="mb-3">
+                Thank you for your interest in becoming a Kingdom Partner.
+                Please complete the form below to begin the partnership process.
+              </p>
+
+              <h5 class="mt-4">Organization/Church/Business Information</h5>
+              <hr />
+
+              <div class="form-group">
+                <label for="kpf-orgName">Name of Organization</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kpf-orgName"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="kpf-contactPerson">Contact Person</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kpf-contactPerson"
+                  required />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="kpf-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="kpf-phone"
+                    required />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="kpf-email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="kpf-email"
+                    required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="kpf-address">Mailing Address</label>
+                <textarea
+                  class="form-control"
+                  id="kpf-address"
+                  rows="2"
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Type of Organization</label>
+                <!-- Radio buttons for Org Type -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kpf-orgType"
+                    value="Church"
+                    id="kpf-type-church"
+                    checked />
+                  <label class="form-check-label" for="kpf-type-church">
+                    Church
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kpf-orgType"
+                    value="Ministry"
+                    id="kpf-type-ministry" />
+                  <label class="form-check-label" for="kpf-type-ministry">
+                    Ministry
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kpf-orgType"
+                    value="Business"
+                    id="kpf-type-business" />
+                  <label class="form-check-label" for="kpf-type-business">
+                    Business
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kpf-orgType"
+                    value="Nonprofit"
+                    id="kpf-type-nonprofit" />
+                  <label class="form-check-label" for="kpf-type-nonprofit">
+                    Nonprofit
+                  </label>
+                </div>
+                <div class="form-check form-inline mt-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="kpf-orgType"
+                    value="Other"
+                    id="kpf-type-other" />
+                  <label class="form-check-label" for="kpf-type-other">
+                    Other:
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm ml-2"
+                    id="kpf-type-other-specify" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Services Requested (Check all that apply)</label>
+                <!-- Checkboxes for Services -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Pastoral/Spiritual Counseling"
+                    id="kpf-service-counseling" />
+                  <label class="form-check-label" for="kpf-service-counseling">
+                    Pastoral/Spiritual Counseling
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Holistic Health Webinar/Training"
+                    id="kpf-service-webinar" />
+                  <label class="form-check-label" for="kpf-service-webinar">
+                    Holistic Health Webinar/Training
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Resiliency Training"
+                    id="kpf-service-resiliency" />
+                  <label class="form-check-label" for="kpf-service-resiliency">
+                    Resiliency Training
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Evangelism or Leadership Training"
+                    id="kpf-service-leadership" />
+                  <label class="form-check-label" for="kpf-service-leadership">
+                    Evangelism or Leadership Training
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Ministry Consulting"
+                    id="kpf-service-consulting" />
+                  <label class="form-check-label" for="kpf-service-consulting">
+                    Ministry Consulting
+                  </label>
+                </div>
+                <div class="form-check form-inline mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-services"
+                    value="Other"
+                    id="kpf-service-other" />
+                  <label class="form-check-label" for="kpf-service-other">
+                    Other:
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm ml-2"
+                    id="kpf-service-other-specify" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>
+                  Please indicate how your organization intends to support the
+                  Orphan Care Mission:
+                </label>
+                <!-- Checkboxes for Commitment -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-commitment"
+                    value="Monthly Financial Contribution"
+                    id="kpf-commit-monthly" />
+                  <label class="form-check-label" for="kpf-commit-monthly">
+                    Monthly Financial Contribution
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-commitment"
+                    value="One-time Donation"
+                    id="kpf-commit-onetime" />
+                  <label class="form-check-label" for="kpf-commit-onetime">
+                    One-time Donation
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-commitment"
+                    value="In-kind Support/Resources"
+                    id="kpf-commit-inkind" />
+                  <label class="form-check-label" for="kpf-commit-inkind">
+                    In-kind Support/Resources
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-commitment"
+                    value="Volunteer Support"
+                    id="kpf-commit-volunteer" />
+                  <label class="form-check-label" for="kpf-commit-volunteer">
+                    Volunteer Support
+                  </label>
+                </div>
+                <div class="form-check form-inline mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="kpf-commitment"
+                    value="Other"
+                    id="kpf-commit-other" />
+                  <label class="form-check-label" for="kpf-commit-other">
+                    Other:
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm ml-2"
+                    id="kpf-commit-other-specify" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="kpf-notes">Additional Notes or Comments</label>
+                <textarea
+                  class="form-control"
+                  id="kpf-notes"
+                  rows="3"></textarea>
+              </div>
+
+              <div
+                class="alert alert-secondary mt-4"
+                role="alert"
+                style="font-size: 0.9em">
+                <strong>Authorization:</strong>
+                I certify that the information provided is accurate and that our
+                organization is interested in establishing a Kingdom Partnership
+                with Christian Therapeutic Ministry.
+              </div>
+            </form>
+            <!-- Kingdom Partnership Form END -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="submit"
+              id="kpf-submitBtn"
+              form="kingdomPartnershipForm"
+              class="btn btn-primary">
+              Submit Form
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Child Sponsorship -->
+    <div
+      class="modal fade"
+      id="childSponsorshipModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="childSponsorshipModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="childSponsorshipModalLabel">
+                Child Sponsorship Form
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Child Sponsorship Form START -->
+              <form id="childSponsorshipForm" novalidate>
+                <p class="mb-3">
+                  Thank you for choosing to support a vulnerable child through
+                  our Orphan Care Mission. Please complete the form below to
+                  begin your sponsorship.
+                </p>
+
+                <h5 class="mt-4">Sponsor Information</h5>
+                <hr />
+
+                <div class="form-group">
+                  <label for="csf-fullName">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="csf-fullName"
+                    required />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="csf-phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="csf-phone"
+                      required />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="csf-email">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="csf-email"
+                      required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="csf-address">Mailing Address</label>
+                  <textarea
+                    class="form-control"
+                    id="csf-address"
+                    rows="2"
+                    required></textarea>
+                </div>
+
+                <h5 class="mt-4">Sponsorship Options</h5>
+                <hr />
+
+                <div class="form-group">
+                  <label>Monthly Sponsorship Amount (choose one):</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-sponsorshipAmount"
+                      id="csf-amount-40"
+                      value="40"
+                      checked />
+                    <label class="form-check-label" for="csf-amount-40">
+                      $40 - Education Support
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-sponsorshipAmount"
+                      id="csf-amount-85"
+                      value="85" />
+                    <label class="form-check-label" for="csf-amount-85">
+                      $85 - Full Care Support (Education, Food, Medical)
+                    </label>
+                  </div>
+                  <div class="form-check form-inline mt-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-sponsorshipAmount"
+                      id="csf-amount-other"
+                      value="Other" />
+                    <label class="form-check-label" for="csf-amount-other">
+                      Other: $
+                    </label>
+                    <input
+                      type="number"
+                      class="form-control form-control-sm ml-1"
+                      id="csf-amount-other-specify"
+                      placeholder="Amount"
+                      style="width: 100px" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Preferred Payment Method:</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-paymentMethod"
+                      id="csf-payment-bank"
+                      value="Bank Transfer"
+                      checked />
+                    <label class="form-check-label" for="csf-payment-bank">
+                      Bank Transfer
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-paymentMethod"
+                      id="csf-payment-paypal"
+                      value="PayPal" />
+                    <label class="form-check-label" for="csf-payment-paypal">
+                      PayPal
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-paymentMethod"
+                      id="csf-payment-zelle"
+                      value="Zelle" />
+                    <label class="form-check-label" for="csf-payment-zelle">
+                      Zelle
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="csf-paymentMethod"
+                      id="csf-payment-check"
+                      value="Check" />
+                    <label class="form-check-label" for="csf-payment-check">
+                      Check
+                    </label>
+                  </div>
+                </div>
+
+                <div
+                  class="alert alert-secondary mt-4"
+                  role="alert"
+                  style="font-size: 0.9em">
+                  <strong>Agreement:</strong>
+                  I commit to sponsoring a child through Christian Therapeutic
+                  Ministry’s Orphan Care Mission. I understand that I will
+                  receive updates on the child’s progress and that my support
+                  will help provide education, medical care, and spiritual
+                  guidance.
+                </div>
+              </form>
+              <!-- Child Sponsorship Form END -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal">
+                Close
+              </button>
+              <button
+                type="submit"
+                id="csf-submitBtn"
+                form="childSponsorshipForm"
+                class="btn btn-primary">
+                Submit Form
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =================================================================== -->
+    <!--                           MODALS END HERE                           -->
+    <!-- =================================================================== -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
     <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
+        authDomain: "impact-for-missions.firebaseapp.com",
+        projectId: "impact-for-missions",
+        storageBucket: "impact-for-missions.firebasestorage.app",
+        messagingSenderId: "178209392285",
+        appId: "1:178209392285:web:537eae20dc70845dc6f674",
+        measurementId: "G-S1G45WKR67",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script>
+      // ===================================================================
+      //                          FORM SUBMISSION LOGIC
+      // ===================================================================
+
+      /**
+       * Shows a Bootstrap alert message in a dedicated container.
+       * @param {string} message The message to display.
+       * @param {string} type The Bootstrap alert type (e.g., 'success', 'danger').
+       */
       function showAlert(message, type) {
-        // Remove any existing alerts
-        const existingAlert = document.querySelector(".alert");
-        if (existingAlert) {
-          existingAlert.remove();
+        const alertContainer = document.getElementById("form-alert-container");
+        if (!alertContainer) {
+          console.error("Alert container not found!");
+          return;
         }
 
         // Create new alert
         const alertDiv = document.createElement("div");
         alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
         alertDiv.role = "alert";
-
         alertDiv.innerHTML = `
-              ${message}
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          `;
+            ${message}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        `;
 
-        // Insert alert before the form
-        const form = document.getElementById("registrationForm");
-        form.parentNode.insertBefore(alertDiv, form);
+        // Clear previous alerts and add the new one
+        alertContainer.innerHTML = "";
+        alertContainer.appendChild(alertDiv);
 
-        // Auto dismiss after 5 seconds
-        setTimeout(() => {
-          alertDiv.classList.remove("show");
-          setTimeout(() => alertDiv.remove(), 150);
-        }, 5000);
+        // Scroll to the alert for visibility
+        alertContainer.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Form submission handler
-      document
-        .getElementById("submitButton")
-        .addEventListener("click", async (e) => {
-          e.preventDefault();
+      /**
+       * Collects and structures data from a specific form.
+       * @param {HTMLFormElement} form The form element being submitted.
+       * @returns {object|null} A structured data object or null if validation fails.
+       */
+      function collectFormData(form) {
+        const formData = {};
+        const formId = form.id;
+        let isValid = true;
 
-          // Get form elements phonenumber
-          const fullname = document.getElementById("fullname").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const phonenumber = document
-            .getElementById("phonenumber")
-            .value.trim();
-          const ageGroup = document.getElementById("ageGroup").value;
-          const interest = document.getElementById("interest").value;
-          const message = document.getElementById("message").value.trim();
-          const submitButton = document.getElementById("submitButton");
-
-          // Basic validation
-          if (!fullname || !phonenumber || !ageGroup || !interest) {
-            showAlert("Please fill in all required fields", "danger");
-            return;
-          }
-
-          // Email validation
-          // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          // if (!emailRegex.test(email)) {
-          //     showAlert('Please enter a valid email address', 'danger');
-          //     return;
-          // }
-
-          try {
-            // Disable submit button to prevent double submission
-
-            submitButton.disabled = true;
-            submitButton.textContent = "Submitting...";
-
-            console.log("Submitting 2");
-            // Get program name based on interest value
-            let programName;
-            switch (interest) {
-              case "train-up-child":
-                programName = "Train-Up a Child Program";
-                break;
-              case "moral-injury":
-                programName =
-                  "Moral Injury/PTSD/Mental Health Spirituality Group";
-                break;
-              case "whole-health-webinar":
-                programName = "Holistic Health Webinar";
-                break;
-              default:
-                programName = "Unknown Program";
-            }
-
-            // Prepare data object
-            const formData = {
-              fullname,
-              email,
-              phonenumber,
-              ageGroup,
-              interest,
-              programName, // Adding full program name for easier reading in database
-              message,
-              createdAt: new Date(),
-              status: "new",
-              type: "membership",
-            };
-
-            // Add document to Firestore
-
-            firebase
-              .firestore()
-              .collection("leads")
-              .add(formData)
-              .then((docRef) => {
-                //  alert("Successfully Submitted")
-                console.log("Document written with ID: ", docRef.id);
-                document.getElementById("registrationForm").reset();
-                showAlert(
-                  `Thank you for registering for the ${programName}! We will contact you shortly with more information.`,
-                  "success",
-                );
-              })
-              .catch((error) => {
-                console.error("Error submitting form:", error);
-                showAlert(
-                  "An error occurred while submitting your registration. Please try again later.",
-                  "danger",
-                );
-              });
-            // const docRef = await addDoc(collection(db, 'leads'), formData);
-
-            // Clear form
-          } catch (error) {
-            console.error("Error submitting form:", error);
-            showAlert(
-              "An error occurred while submitting your registration. Please try again later.",
-              "danger",
-            );
-          } finally {
-            // Re-enable submit button
-            const submitButton = document.getElementById("submitButton");
-            submitButton.disabled = false;
-            submitButton.textContent = "Submit";
+        // Basic validation for all required fields
+        form.querySelectorAll("[required]").forEach((input) => {
+          if (!input.value.trim()) {
+            input.classList.add("is-invalid"); // Highlight the invalid field
+            isValid = false;
+          } else {
+            input.classList.remove("is-invalid");
           }
         });
-    </script>
 
+        // Email validation
+        const emailField = form.querySelector('input[type="email"]');
+        if (emailField) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailField.value)) {
+            emailField.classList.add("is-invalid");
+            isValid = false;
+          } else {
+            emailField.classList.remove("is-invalid");
+          }
+        }
+
+        if (!isValid) {
+          showAlert(
+            "Please fill in all required fields and provide a valid email.",
+            "danger",
+          );
+          return null;
+        }
+
+        // Collect data based on form ID
+        switch (formId) {
+          case "spiritualCounselingForm":
+            formData.fullName = form.querySelector("#scf-fullName").value;
+            formData.phone = form.querySelector("#scf-phone").value;
+            formData.email = form.querySelector("#scf-email").value;
+            formData.preferredContact = form.querySelector(
+              'input[name="scf-contactMethod"]:checked',
+            ).value;
+            formData.address = form.querySelector("#scf-address").value;
+            formData.counselingNeeds = Array.from(
+              form.querySelectorAll('input[name="scf-needs"]:checked'),
+            )
+              .map((cb) => {
+                let value = cb.value;
+                if (value === "Other") {
+                  const specifyValue = form
+                    .querySelector("#scf-need-other-specify")
+                    .value.trim();
+                  if (specifyValue) return `Other: ${specifyValue}`;
+                }
+                return value;
+              })
+              .filter(Boolean); // Filter out potential nulls
+            formData.concern = form.querySelector("#scf-concern").value;
+            formData.availability =
+              form.querySelector("#scf-availability").value;
+            break;
+
+          case "kingdomPartnershipForm":
+            formData.orgName = form.querySelector("#kpf-orgName").value;
+            formData.contactPerson =
+              form.querySelector("#kpf-contactPerson").value;
+            formData.phone = form.querySelector("#kpf-phone").value;
+            formData.email = form.querySelector("#kpf-email").value;
+            formData.address = form.querySelector("#kpf-address").value;
+            formData.orgType = form.querySelector(
+              'input[name="kpf-orgType"]:checked',
+            ).value;
+            if (formData.orgType === "Other") {
+              formData.orgType = `Other: ${
+                form.querySelector("#kpf-type-other-specify").value
+              }`;
+            }
+            formData.servicesRequested = Array.from(
+              form.querySelectorAll('input[name="kpf-services"]:checked'),
+            )
+              .map((cb) => {
+                let value = cb.value;
+                if (value === "Other") {
+                  const specifyValue = form
+                    .querySelector("#kpf-service-other-specify")
+                    .value.trim();
+                  if (specifyValue) return `Other: ${specifyValue}`;
+                }
+                return value;
+              })
+              .filter(Boolean);
+            formData.commitment = Array.from(
+              form.querySelectorAll('input[name="kpf-commitment"]:checked'),
+            )
+              .map((cb) => {
+                let value = cb.value;
+                if (value === "Other") {
+                  const specifyValue = form
+                    .querySelector("#kpf-commit-other-specify")
+                    .value.trim();
+                  if (specifyValue) return `Other: ${specifyValue}`;
+                }
+                return value;
+              })
+              .filter(Boolean);
+            formData.notes = form.querySelector("#kpf-notes").value;
+            break;
+
+          case "childSponsorshipForm":
+            formData.fullName = form.querySelector("#csf-fullName").value;
+            formData.phone = form.querySelector("#csf-phone").value;
+            formData.email = form.querySelector("#csf-email").value;
+            formData.address = form.querySelector("#csf-address").value;
+            formData.sponsorshipAmount = form.querySelector(
+              'input[name="csf-sponsorshipAmount"]:checked',
+            ).value;
+            if (formData.sponsorshipAmount === "Other") {
+              formData.sponsorshipAmount = form.querySelector(
+                "#csf-amount-other-specify",
+              ).value;
+            }
+            formData.paymentMethod = form.querySelector(
+              'input[name="csf-paymentMethod"]:checked',
+            ).value;
+            break;
+        }
+        return formData;
+      }
+
+      /**
+       * Handles the submission event for any of the forms.
+       * @param {Event} event The submit event.
+       */
+      async function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent default page reload
+
+        const form = event.target;
+        const formId = form.id;
+        const formType = form.dataset.formType; // Get form type from data attribute
+        const submitButton = document.querySelector(`button[form="${formId}"]`);
+
+        const data = collectFormData(form);
+        if (!data) return; // Stop if validation failed
+
+        // Disable button to prevent double submission
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+
+        // Add metadata to the data object
+        data.formType = formType;
+        data.submittedAt = new Date();
+        data.status = "new";
+
+        try {
+          const docRef = await firebase
+            .firestore()
+            .collection("leads")
+            .add(data);
+          console.log("Document written with ID: ", docRef.id);
+
+          // Success!
+          form.reset();
+          $(`#${formId.replace("Form", "Modal")}`).modal("hide"); // Close the modal (requires jQuery)
+          showAlert(
+            `Thank you! Your ${formType} form has been submitted successfully. We will be in touch shortly.`,
+            "success",
+          );
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          showAlert(
+            "There was an error submitting your form. Please try again later.",
+            "danger",
+          );
+        } finally {
+          // Re-enable the button
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Form";
+        }
+      }
+
+      // Attach event listeners to each form
+      const spiritualCounselingForm = document.getElementById(
+        "spiritualCounselingForm",
+      );
+      if (spiritualCounselingForm) {
+        spiritualCounselingForm.dataset.formType = "Spiritual Counseling";
+        spiritualCounselingForm.addEventListener("submit", handleFormSubmit);
+      }
+
+      const kingdomPartnershipForm = document.getElementById(
+        "kingdomPartnershipForm",
+      );
+      if (kingdomPartnershipForm) {
+        kingdomPartnershipForm.dataset.formType = "Kingdom Partnership";
+        kingdomPartnershipForm.addEventListener("submit", handleFormSubmit);
+      }
+
+      const childSponsorshipForm = document.getElementById(
+        "childSponsorshipForm",
+      );
+      if (childSponsorshipForm) {
+        childSponsorshipForm.dataset.formType = "Child Sponsorship";
+        childSponsorshipForm.addEventListener("submit", handleFormSubmit);
+      }
+    </script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
