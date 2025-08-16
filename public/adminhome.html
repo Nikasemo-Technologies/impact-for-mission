@@ -1,367 +1,733 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impact For Mission</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="ctmlogo2.png">
-    <script src="app.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="icon" href="ctmlogo2.png" />
     <!-- Custom CSS -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: white;
-            border-bottom: 1px solid #e3e3e3;
-            padding: 15px 20px;
-        }
-        .navbar-brand {
-            color: #0d6efd;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-        .logout-btn {
-            color: #333;
-            text-decoration: none;
-        }
-        .welcome-section {
-            background-color: #ccc;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .welcome-section h2 {
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-        .section-card {
-            background-color: #f9f9f9;
-            border: 1px solid #e3e3e3;
-            border-radius: 5px;
-            padding: 15px;
-            height: 100%;
-        }
-        .section-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        .registration-card {
-            background-color: white;
-            border: 1px solid #e3e3e3;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .live-badge {
-            background-color: #dc3545;
-            color: white;
-            font-weight: bold;
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        .daily-impact-btn {
-            background-color: #0d6efd;
-            color: white;
-            font-weight: bold;
-            padding: 8px 20px;
-            border-radius: 5px;
-            border: none;
-        }
-        .info-line {
-            margin-bottom: 5px;
-        }
-        .info-line strong {
-            display: inline-block;
-            min-width: 150px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: white;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 15px 20px;
+      }
+      .navbar-brand {
+        color: #0d6efd;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .logout-btn {
+        color: #333;
+        text-decoration: none;
+      }
+      .welcome-section {
+        background-color: #ccc;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+      .welcome-section h2 {
+        margin-top: 0;
+        font-size: 1.8rem;
+      }
+      .section-card {
+        background-color: #f9f9f9;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        padding: 15px;
+        height: 100%;
+      }
+      .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+      .registration-card {
+        background-color: white;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .live-badge {
+        background-color: #dc3545;
+        color: white;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+      }
+      .daily-impact-btn {
+        background-color: #0d6efd;
+        color: white;
+        font-weight: bold;
+        padding: 8px 20px;
+        border-radius: 5px;
+        border: none;
+      }
+      .info-line {
+        margin-bottom: 5px;
+      }
+      .info-line strong {
+        display: inline-block;
+        min-width: 150px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar justify-content-between">
-        <a class="navbar-brand" href="#">IMPACT FOR MISSION</a>
-        <a class="logout-btn" href="#">Logout</a>
+      <a class="navbar-brand" href="#">IMPACT FOR MISSION</a>
+      <a class="logout-btn" href="#">Logout</a>
     </nav>
 
     <div class="container">
-        <!-- Welcome Section -->
-        <div class="row">
-            <div class="col-md-8">
-                <div class="welcome-section">
-                    <h2>Hello</h2>
-                    <p>Access all emails from all registrations.</p>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-center">
-                <div class="w-100">
-                    <h5>Title</h5>
-                    <p id="live-description">Lorem ipsum dolor sit amet</p>
-                    <a href="#" id="live-link" target="_blank" style="text-decoration: none;"><span class="live-badge">● Live</span></a>
-                    <div class="text-end mt-3">
-                        <button class="daily-impact-btn" data-bs-toggle="modal" data-bs-target="#dailyImpactModal">Daily Impact</button>
-                    </div>
-                </div>
-            </div>
+      <!-- Welcome Section -->
+      <div class="row">
+        <div class="col-md-8">
+          <div class="welcome-section">
+            <h2>Hello</h2>
+            <p>Access all emails from all registrations.</p>
+          </div>
         </div>
-
-        <!-- Main Content Sections -->
-        <div class="row g-4">
-            <!-- Memberships Section -->
-            <div class="col-md-3">
-                <div class="section-card">
-                    <h3 class="section-title">Meberships</h3>
-                    <div id="memberships-list">
-                        <!-- Memberships items will be loaded here -->
-                        <div class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="w-100">
+            <h5>Title</h5>
+            <p id="live-description">Lorem ipsum dolor sit amet</p>
+            <a
+              href="#"
+              id="live-link"
+              target="_blank"
+              style="text-decoration: none">
+              <span class="live-badge">● Live</span>
+            </a>
+            <div class="text-end mt-3">
+              <button
+                class="daily-impact-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#dailyImpactModal">
+                Daily Impact
+              </button>
             </div>
-
-            <!-- Train Up A Child Section -->
-            <div class="col-md-3">
-                <div class="section-card">
-                    <h3 class="section-title">Train Up A Child</h3>
-                    <div id="train-up-child-list">
-                        <!-- Train Up items will be loaded here -->
-                        <div class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Moral Injury Section -->
-            <div class="col-md-3">
-                <div class="section-card">
-                    <h3 class="section-title">Moral Injury</h3>
-                    <div id="moral-injury-list">
-                        <!-- Moral Injury items will be loaded here -->
-                        <div class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Holistic Health Section -->
-            <div class="col-md-3">
-                <div class="section-card">
-                    <h3 class="section-title">Holistic Health</h3>
-                    <div id="holistic-health-list">
-                        <!-- Holistic Health items will be loaded here -->
-                        <div class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!--               START: NEW SUBMISSIONS DASHBOARD                  -->
+      <!-- =================================================================== -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              <h3 class="mb-0">Form Submissions</h3>
+            </div>
+            <div class="card-body">
+              <!-- Tab Navigation -->
+              <ul class="nav nav-tabs" id="submissionTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="all-tab"
+                    data-filter="all"
+                    type="button">
+                    All Submissions
+                    <span class="badge bg-secondary" id="count-all">0</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="counseling-tab"
+                    data-filter="Spiritual Counseling"
+                    type="button">
+                    Counseling
+                    <span class="badge bg-secondary" id="count-counseling">
+                      0
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="partnership-tab"
+                    data-filter="Kingdom Partnership"
+                    type="button">
+                    Partnership
+                    <span class="badge bg-secondary" id="count-partnership">
+                      0
+                    </span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="sponsorship-tab"
+                    data-filter="Child Sponsorship"
+                    type="button">
+                    Sponsorship
+                    <span class="badge bg-secondary" id="count-sponsorship">
+                      0
+                    </span>
+                  </button>
+                </li>
+                <!-- We can add a tab for old event leads if needed -->
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="events-tab"
+                    data-filter="event"
+                    type="button">
+                    Events
+                    <span class="badge bg-secondary" id="count-events">0</span>
+                  </button>
+                </li>
+              </ul>
+
+              <!-- Table to Display Submissions -->
+              <div class="table-responsive mt-3">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date Submitted</th>
+                      <th scope="col">Name / Org</th>
+                      <th scope="col">Form Type</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="submissions-table-body">
+                    <!-- Submissions will be loaded here by JavaScript -->
+                    <tr>
+                      <td colspan="6" class="text-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                          <span class="visually-hidden">
+                            Loading submissions...
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- =================================================================== -->
+      <!--                END: NEW SUBMISSIONS DASHBOARD                   -->
+      <!-- =================================================================== -->
+
+      <!-- "View Details" Modal -->
+      <div
+        class="modal fade"
+        id="viewDetailsModal"
+        tabindex="-1"
+        aria-labelledby="viewDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewDetailsModalLabel">
+                Submission Details
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="details-modal-body">
+              <!-- Details will be loaded here by JavaScript -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Daily Impact Modal -->
-    <div class="modal fade" id="dailyImpactModal" tabindex="-1" aria-labelledby="dailyImpactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="dailyImpactModalLabel">Update Daily Impact</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="dailyImpactForm">
-                        <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="title" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="link" class="form-label">Link</label>
-                            <input type="text" class="form-control" id="link">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="dailyImpactModal"
+      tabindex="-1"
+      aria-labelledby="dailyImpactModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dailyImpactModalLabel">
+              Update Daily Impact
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="dailyImpactForm">
+              <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" required />
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  id="description"
+                  rows="3"
+                  required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="link" class="form-label">Link</label>
+                <input type="text" class="form-control" id="link" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="saveChangesBtn">
+              Save changes
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Firebase App (the core Firebase SDK) -->
+
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
-    <!-- Firebase Firestore -->
     <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
 
     <script>
-        // Firebase configuration - Replace with your Firebase config
-        const firebaseConfig = {
+      // Firebase configuration
+      const firebaseConfig = {
         apiKey: "AIzaSyC6ntQXv8Byyv7AUp_JZiJLQa2nOXi9JVc",
         authDomain: "impact-for-missions.firebaseapp.com",
         projectId: "impact-for-missions",
         storageBucket: "impact-for-missions.firebasestorage.app",
         messagingSenderId: "178209392285",
         appId: "1:178209392285:web:537eae20dc70845dc6f674",
-        measurementId: "G-S1G45WKR67"
+        measurementId: "G-S1G45WKR67",
       };
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
 
-        // Live Document ID
-        const liveDocId = "y20TwFrk2rbfVkZ7aEYW";
+      // ===================================================================
+      //                      STATE & GLOBAL VARIABLES
+      // ===================================================================
+      let allSubmissions = []; // This will hold all fetched data
+      let viewDetailsModal; // To hold the Bootstrap modal instance
 
-        // Load Live Document
-        function loadLiveDoc() {
-            db.collection("live").doc(liveDocId).get().then((doc) => {
-                if (doc.exists) {
-                    const data = doc.data();
-                    document.getElementById("live-description").textContent = data.description || "No description available";
-                    document.getElementById("title").value = data.title || "";
-                    document.getElementById("description").value = data.description || "";
-                    document.getElementById("link").value = data.link || "";
-                    
-                    // Set the link for the Live badge
-                    const liveLink = document.getElementById("live-link");
-                    if (data.link && data.link.trim() !== '') {
-                        liveLink.href = data.link;
-                    } else {
-                        liveLink.href = "#";
-                    }
-                } else {
-                    console.log("No such document!");
-                }
-            }).catch((error) => {
-                console.log("Error getting document:", error);
-            });
+      // ===================================================================
+      //                  SUBMISSION DASHBOARD LOGIC
+      // ===================================================================
+
+      /**
+       * Returns a Bootstrap background color class based on the submission status.
+       * @param {string} status The status string (e.g., 'new', 'Contacted').
+       * @returns {string} The Bootstrap background class.
+       */
+      function getStatusBadgeClass(status) {
+        switch (status) {
+          case "new":
+            return "bg-success text-white";
+          case "Contacted":
+            return "bg-info text-dark";
+          case "In Progress":
+            return "bg-warning text-dark";
+          case "Resolved":
+            return "bg-secondary text-white";
+          default:
+            return "bg-light text-dark";
+        }
+      }
+
+      /**
+       * Renders the submissions table based on the provided data array.
+       * @param {Array} submissionsToRender The array of submission objects to display.
+       */
+      function renderSubmissionsTable(submissionsToRender) {
+        const tableBody = document.getElementById("submissions-table-body");
+        tableBody.innerHTML = ""; // Clear existing table rows
+
+        if (submissionsToRender.length === 0) {
+          tableBody.innerHTML =
+            '<tr><td colspan="6" class="text-center p-5">No submissions found for this category.</td></tr>';
+          return;
         }
 
-        // Load Registrations by Type
-        function loadRegistrationsByType(type, collectionId) {
-            let query;
-            switch(type) {
-                case 'membership':
-                    query = db.collection("leads").where("type", "==", "membership");
-                    break;
-                case 'train-up-child':
-                    query = db.collection("leads").where("type", "==", "events-train-up-a-child");
-                    break;
-                case 'moral-injury':
-                    query = db.collection("leads").where("type", "==", "events-moralinjury");
-                    break;
-                case 'holistic-health':
-                    query = db.collection("leads").where("type", "==", "events-wholehealth");
-                    break;
-                default:
-                    console.log("Invalid type");
-                    return;
-            }
+        submissionsToRender.forEach((submission) => {
+          const submittedAt = submission.submittedAt?.toDate
+            ? submission.submittedAt.toDate()
+            : submission.createdAt?.toDate
+            ? submission.createdAt.toDate()
+            : new Date();
+          const formattedDate = submittedAt.toLocaleString();
 
-            query.get().then((querySnapshot) => {
-                const container = document.getElementById(collectionId);
-                container.innerHTML = '';
+          const name =
+            submission.fullName ||
+            submission.fullname ||
+            submission.orgName ||
+            "N/A";
+          const email = submission.email || "N/A";
 
-                if (querySnapshot.empty) {
-                    container.innerHTML = '<p class="text-center">No registrations found</p>';
-                    return;
-                }
+          let formType = submission.formType || "Event Registration";
+          if (submission.type && submission.type.startsWith("events-")) {
+            formType = submission.programName || "Event";
+          }
 
-                querySnapshot.forEach((doc) => {
-                    const data = doc.data();
-                    console.log(doc.data().phonenumber);
-                    const card = document.createElement('div');
-                    card.classList.add('registration-card');
+          const currentStatus = submission.status || "new";
+          const badgeClass = getStatusBadgeClass(currentStatus);
+          const statuses = ["new", "Contacted", "In Progress", "Resolved"];
 
-                    // Create registration info
-                    let cardContent = `
-                        <div class="info-line"><strong>Fullname:</strong> ${data.fullname || 'N/A'}</div>
-                        <div class="info-line"><strong>Phone Number:</strong> ${data.phonenumber || 'N/A'}</div>
-                        <div class="info-line"><strong>Email:</strong> ${data.email || 'N/A'}</div>
-                        <div class="info-line"><strong>Age Group:</strong> ${data.ageGroup || '18-25'}</div>
-                    `;
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${formattedDate}</td>
+            <td>${name}</td>
+            <td><span class="badge bg-info text-dark">${formType}</span></td>
+            <td>${email}</td>
+            <td>
+                <select class="form-select form-select-sm status-select ${badgeClass}" data-id="${
+            submission.id
+          }" aria-label="Update status">
+                    ${statuses
+                      .map(
+                        (status) =>
+                          `<option value="${status}" ${
+                            currentStatus === status ? "selected" : ""
+                          }>${status}</option>`,
+                      )
+                      .join("")}
+                </select>
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm view-details-btn" data-id="${
+                  submission.id
+                }">View</button>
+            </td>
+        `;
+          tableBody.appendChild(row);
+        });
+      }
 
-                    // Add program name for memberships
-                    if (type === 'membership' && data.progName) {
-                        cardContent += `<div class="info-line"><strong>Interest:</strong> ${data.progName || 'Counseling'}</div>`;
-                    } else if (type === 'train-up-child' || type === 'moral-injury' || type === 'holistic-health') {
-                        cardContent += `<div class="info-line"><strong>Program Schedule:</strong> ${data.progSched || 'Counseling'}</div>`;
-                    }
+      /**
+       * Updates the counts on the filter tabs.
+       */
+      function updateTabCounts() {
+        const counts = {
+          all: allSubmissions.length,
+          counseling: allSubmissions.filter(
+            (s) => s.formType === "Spiritual Counseling",
+          ).length,
+          partnership: allSubmissions.filter(
+            (s) => s.formType === "Kingdom Partnership",
+          ).length,
+          sponsorship: allSubmissions.filter(
+            (s) => s.formType === "Child Sponsorship",
+          ).length,
+          events: allSubmissions.filter(
+            (s) => s.type && s.type.startsWith("events-"),
+          ).length,
+        };
 
-                    card.innerHTML = cardContent;
-                    container.appendChild(card);
-                });
-            }).catch((error) => {
-                console.log("Error getting documents:", error);
-                document.getElementById(collectionId).innerHTML = 
-                    '<p class="text-center text-danger">Error loading data</p>';
+        document.getElementById("count-all").textContent = counts.all;
+        document.getElementById("count-counseling").textContent =
+          counts.counseling;
+        document.getElementById("count-partnership").textContent =
+          counts.partnership;
+        document.getElementById("count-sponsorship").textContent =
+          counts.sponsorship;
+        document.getElementById("count-events").textContent = counts.events;
+      }
+
+      /**
+       * Listens for real-time updates to the 'leads' collection.
+       */
+      function listenForSubmissions() {
+        // MODIFICATION 1: We remove the .orderBy() from the Firestore query.
+        // We will now fetch ALL documents from the 'leads' collection.
+        db.collection("leads").onSnapshot(
+          (querySnapshot) => {
+            allSubmissions = []; // Reset the global array
+            querySnapshot.forEach((doc) => {
+              allSubmissions.push({ id: doc.id, ...doc.data() });
             });
+
+            // MODIFICATION 2: We now sort the data here in JavaScript.
+            // This allows us to handle both 'submittedAt' and 'createdAt' fields.
+            allSubmissions.sort((a, b) => {
+              // Get the timestamp for item 'b', falling back to createdAt, then to a default old date
+              const dateB =
+                b.submittedAt?.toDate() || b.createdAt?.toDate() || new Date(0);
+              // Get the timestamp for item 'a'
+              const dateA =
+                a.submittedAt?.toDate() || a.createdAt?.toDate() || new Date(0);
+
+              // Sort in descending order (newest first)
+              return dateB - dateA;
+            });
+
+            // The rest of the function remains the same
+            const activeFilter = document.querySelector(
+              "#submissionTabs .nav-link.active",
+            ).dataset.filter;
+            handleFilterClick(activeFilter);
+            updateTabCounts();
+          },
+          (error) => {
+            console.error("Error listening for submissions: ", error);
+            document.getElementById("submissions-table-body").innerHTML =
+              '<tr><td colspan="6" class="text-center p-5 text-danger">Error loading data. Check console for details.</td></tr>';
+          },
+        );
+      }
+
+      /**
+       * Handles the click event on a filter tab.
+       * @param {string} filter The filter to apply (e.g., 'all', 'Spiritual Counseling').
+       */
+      function handleFilterClick(filter) {
+        let filteredSubmissions = [];
+
+        if (filter === "all") {
+          filteredSubmissions = allSubmissions;
+        } else if (filter === "event") {
+          filteredSubmissions = allSubmissions.filter(
+            (s) => s.type && s.type.startsWith("events-"),
+          );
+        } else {
+          filteredSubmissions = allSubmissions.filter(
+            (s) => s.formType === filter,
+          );
         }
+        renderSubmissionsTable(filteredSubmissions);
+      }
 
-        // Save Daily Impact Changes
-        document.getElementById("saveChangesBtn").addEventListener("click", function() {
-            const title = document.getElementById("title").value;
-            const description = document.getElementById("description").value;
-            const link = document.getElementById("link").value;
+      /**
+       * Displays the details of a specific submission in the modal.
+       * @param {string} submissionId The ID of the submission to display.
+       */
+      function showDetailsModal(submissionId) {
+        const submission = allSubmissions.find((s) => s.id === submissionId);
+        if (!submission) return;
 
-            // Basic validation
-            if (!title || !description) {
-                alert("Title and Description are required!");
-                return;
+        const modalBody = document.getElementById("details-modal-body");
+        let content = '<dl class="row">';
+
+        // Create a nicely formatted list of all data fields
+        for (const [key, value] of Object.entries(submission)) {
+          if (key === "id") continue; // Don't show the doc ID
+
+          let displayValue = value;
+          if (value && typeof value.toDate === "function") {
+            displayValue = value.toDate().toLocaleString(); // Format timestamps
+          } else if (Array.isArray(value)) {
+            displayValue = value.join(", "); // Format arrays
+          }
+
+          // Make key more readable
+          const displayKey = key
+            .replace(/([A-Z])/g, " $1")
+            .replace(/^./, (str) => str.toUpperCase());
+
+          content += `
+            <dt class="col-sm-4">${displayKey}</dt>
+            <dd class="col-sm-8">${displayValue || "N/A"}</dd>
+        `;
+        }
+        content += "</dl>";
+        modalBody.innerHTML = content;
+
+        viewDetailsModal.show();
+      }
+
+      /**
+       * Updates the status of a specific submission in Firestore.
+       * @param {string} submissionId The document ID of the submission.
+       * @param {string} newStatus The new status to set.
+       */
+      async function updateSubmissionStatus(submissionId, newStatus) {
+        console.log(`Updating ${submissionId} to ${newStatus}`);
+        const leadRef = db.collection("leads").doc(submissionId);
+        try {
+          await leadRef.update({ status: newStatus });
+          console.log(`Successfully updated status for ${submissionId}.`);
+        } catch (error) {
+          console.error("Error updating status: ", error);
+          // Optionally, show an error alert to the user
+          alert(
+            "Failed to update status. Please check the console and try again.",
+          );
+        }
+      }
+
+      // ===================================================================
+      //                       DAILY IMPACT LOGIC
+      // ===================================================================
+      const liveDocId = "y20TwFrk2rbfVkZ7aEYW";
+
+      function loadLiveDoc() {
+        /* ... (Your existing loadLiveDoc function is fine) ... */
+      }
+      // (Note: To save space, I've omitted the full code for loadLiveDoc and the saveChangesBtn listener, as they don't need to be changed. You can copy them back in from your original file or I can provide them again if needed.)
+
+      // For this example to be complete, let's include them here.
+      function loadLiveDoc() {
+        db.collection("live")
+          .doc(liveDocId)
+          .get()
+          .then((doc) => {
+            if (doc.exists) {
+              const data = doc.data();
+              document.getElementById("live-description").textContent =
+                data.description || "No description available";
+              document.getElementById("title").value = data.title || "";
+              document.getElementById("description").value =
+                data.description || "";
+              document.getElementById("link").value = data.link || "";
+              const liveLink = document.getElementById("live-link");
+              liveLink.href =
+                data.link && data.link.trim() !== "" ? data.link : "#";
+            } else {
+              console.log("No such document!");
             }
+          })
+          .catch((error) => {
+            console.log("Error getting document:", error);
+          });
+      }
 
-            // Update firestore document
-            db.collection("live").doc(liveDocId).update({
-                title: title,
-                description: description,
-                link: link,
-                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+      document
+        .getElementById("saveChangesBtn")
+        .addEventListener("click", function () {
+          const title = document.getElementById("title").value;
+          const description = document.getElementById("description").value;
+          const link = document.getElementById("link").value;
+          if (!title || !description) {
+            alert("Title and Description are required!");
+            return;
+          }
+          db.collection("live")
+            .doc(liveDocId)
+            .update({
+              title: title,
+              description: description,
+              link: link,
+              updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
             })
             .then(() => {
-                // Close modal and update UI
-                document.getElementById("live-description").textContent = description;
-                const modal = bootstrap.Modal.getInstance(document.getElementById('dailyImpactModal'));
-                modal.hide();
-                
-                // Show success message
-                alert("Daily impact updated successfully!");
+              document.getElementById("live-description").textContent =
+                description;
+              const modal = bootstrap.Modal.getInstance(
+                document.getElementById("dailyImpactModal"),
+              );
+              modal.hide();
+              alert("Daily impact updated successfully!");
             })
             .catch((error) => {
-                console.error("Error updating document: ", error);
-                alert("Error updating document: " + error.message);
+              console.error("Error updating document: ", error);
+              alert("Error updating document: " + error.message);
             });
         });
 
-        // Initialize dashboard data on page load
-        document.addEventListener("DOMContentLoaded", function() {
-            // Load live document
-            loadLiveDoc();
-            
-            // Load registrations for each section
-            loadRegistrationsByType('membership', 'memberships-list');
-            loadRegistrationsByType('train-up-child', 'train-up-child-list');
-            loadRegistrationsByType('moral-injury', 'moral-injury-list');
-            loadRegistrationsByType('holistic-health', 'holistic-health-list');
-        });
+      // ===================================================================
+      //                       INITIALIZATION & EVENT LISTENERS
+      // ===================================================================
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the details modal instance
+        viewDetailsModal = new bootstrap.Modal(
+          document.getElementById("viewDetailsModal"),
+        );
+
+        // Load non-dashboard related data
+        loadLiveDoc();
+
+        // Start listening for real-time submission updates
+        listenForSubmissions();
+
+        // Add click listeners to the filter tabs
+        document
+          .querySelectorAll("#submissionTabs .nav-link")
+          .forEach((tab) => {
+            tab.addEventListener("click", (event) => {
+              // Handle active tab style
+              document
+                .querySelectorAll("#submissionTabs .nav-link")
+                .forEach((t) => t.classList.remove("active"));
+              event.target.classList.add("active");
+              // Filter and render the table
+              handleFilterClick(event.target.dataset.filter);
+            });
+          });
+
+        // Add a single event listener to the table body for the "View" buttons (event delegation)
+        document
+          .getElementById("submissions-table-body")
+          .addEventListener("click", (event) => {
+            if (
+              event.target &&
+              event.target.classList.contains("view-details-btn")
+            ) {
+              const submissionId = event.target.dataset.id;
+              showDetailsModal(submissionId);
+            }
+          });
+
+        // ADD A NEW, SEPARATE LISTENER FOR THE 'CHANGE' EVENT
+        document
+          .getElementById("submissions-table-body")
+          .addEventListener("change", (event) => {
+            if (
+              event.target &&
+              event.target.classList.contains("status-select")
+            ) {
+              const submissionId = event.target.dataset.id;
+              const newStatus = event.target.value;
+
+              // Temporarily disable the dropdown to prevent multiple changes
+              event.target.disabled = true;
+
+              // Call the function to update Firestore
+              updateSubmissionStatus(submissionId, newStatus);
+
+              // NOTE: We don't need to re-enable the dropdown here manually.
+              // The onSnapshot listener will fire upon a successful update and re-render the entire table,
+              // which will automatically create a new, enabled dropdown. This is the magic of real-time listeners!
+            }
+          });
+      });
     </script>
-</body>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
