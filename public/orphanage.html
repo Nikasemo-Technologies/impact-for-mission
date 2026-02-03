@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Christian Therapeutic Ministry</title>
@@ -9,6 +9,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
       rel="stylesheet" />
@@ -249,100 +251,9 @@
         }
       }
     </style>
-
-    <style>
-      /* Add this CSS to style the carousel indicators */
-      .carousel {
-        position: relative; /* Ensure the carousel is the positioning context */
-      }
-
-      .carousel-indicators {
-        position: absolute; /* Position indicators absolutely within the carousel */
-        left: 1100px; /* Adjust the right position as needed */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Adjust for vertical centering */
-        display: flex;
-        flex-direction: column; /* Make indicators vertical */
-        z-index: 1000; /* Ensure indicators are on top */
-      }
-
-      .carousel-indicators li {
-        margin: 5px 0; /* Space between indicators */
-        width: 10px; /* Adjust width as needed */
-        height: 10px; /* Adjust height as needed */
-        border-radius: 50%; /* Make them circular */
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.5
-        ); /* Default background color */
-      }
-
-      .carousel-indicators .active {
-        background-color: #ffffff; /* Active indicator color */
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        top: auto;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-      }
-
-      .carousel-control-prev {
-        left: 20px;
-        bottom: 30px;
-      }
-
-      .carousel-control-next {
-        left: 80px;
-        bottom: 30px;
-      }
-
-      /* Optional: Adjust icon position within the button */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-      }
-
-      @media only screen and (min-width: 100px) and (max-width: 600px) {
-        .carousel-indicators {
-          position: absolute; /* Position indicators absolutely within the carousel */
-          left: -40px; /* Adjust the right position as needed */
-          top: 50%; /* Center vertically */
-          display: none;
-          transform: translateY(-50%); /* Adjust for vertical centering */
-          display: flex;
-          flex-direction: column; /* Make indicators vertical */
-          z-index: 1000; /* Ensure indicators are on top */
-        }
-
-        .carousel-indicators li {
-          margin: 5px 0; /* Space between indicators */
-          width: 10px; /* Adjust width as needed */
-          height: 10px; /* Adjust height as needed */
-          border-radius: 50%; /* Make them circular */
-          background-color: rgba(
-            255,
-            255,
-            255,
-            0.5
-          ); /* Default background color */
-        }
-
-        .carousel-indicators .active {
-          background-color: #ffffff; /* Active indicator color */
-        }
-      }
-    </style>
   </head>
 
-  <body style="font-family: 'Roboto', serif">
+  <body style="font-family: &quot;Roboto&quot;, serif">
     <div id="nav-placeholder"></div>
 
     <style type="text/css">
@@ -533,11 +444,8 @@
       }
 
       .imagebg1 {
-        background: linear-gradient(
-            0deg,
-            rgba(5, 7, 158, 0.5),
-            rgba(11, 24, 201, 0.85)
-          ),
+        background:
+          linear-gradient(0deg, rgba(5, 7, 158, 0.5), rgba(11, 24, 201, 0.85)),
           url("cc1.jpeg");
         padding: 30px;
         height: 400px;
@@ -663,6 +571,24 @@
         transform: translateY(-5px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
       }
+
+      .carousel-item img {
+        width: 100%;
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Prevents image stretching */
+        border-radius: 8px;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%; /* Makes the arrows sit outside the images slightly */
+      }
+      /* Custom styling for arrows so they are visible on white backgrounds */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        padding: 20px;
+      }
     </style>
 
     <section class="imagebg1">
@@ -699,6 +625,300 @@
                 new generation of hope-filled leaders.
               </p>
             </div>
+          </div>
+        </div>
+
+        <!-- Orphans slider -->
+        <div class="container mt-5 mb-5">
+          <div
+            id="multiImageCarousel"
+            class="carousel slide"
+            data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Slide 1 (1–18) -->
+              <div class="carousel-item active">
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/1.jpeg" class="img-fluid" />
+                    <p class="text-center">1</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/2.jpeg" class="img-fluid" />
+                    <p class="text-center">2</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/3.jpeg" class="img-fluid" />
+                    <p class="text-center">3</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/4.jpeg" class="img-fluid" />
+                    <p class="text-center">4</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/5.jpeg" class="img-fluid" />
+                    <p class="text-center">5</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/6.jpeg" class="img-fluid" />
+                    <p class="text-center">6</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/7.jpeg" class="img-fluid" />
+                    <p class="text-center">7</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/8.jpeg" class="img-fluid" />
+                    <p class="text-center">8</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/9.jpeg" class="img-fluid" />
+                    <p class="text-center">9</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/10.jpeg" class="img-fluid" />
+                    <p class="text-center">10</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/11.jpeg" class="img-fluid" />
+                    <p class="text-center">11</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/12.jpeg" class="img-fluid" />
+                    <p class="text-center">12</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/13.jpeg" class="img-fluid" />
+                    <p class="text-center">13</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/14.jpeg" class="img-fluid" />
+                    <p class="text-center">14</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/15.jpeg" class="img-fluid" />
+                    <p class="text-center">15</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/16.jpeg" class="img-fluid" />
+                    <p class="text-center">16</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/17.jpeg" class="img-fluid" />
+                    <p class="text-center">17</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/18.jpeg" class="img-fluid" />
+                    <p class="text-center">18</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 (19–36) -->
+              <div class="carousel-item">
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/19.jpeg" class="img-fluid" />
+                    <p class="text-center">19</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/20.jpeg" class="img-fluid" />
+                    <p class="text-center">20</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/21.jpeg" class="img-fluid" />
+                    <p class="text-center">21</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/22.jpeg" class="img-fluid" />
+                    <p class="text-center">22</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/23.jpeg" class="img-fluid" />
+                    <p class="text-center">23</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/24.jpeg" class="img-fluid" />
+                    <p class="text-center">24</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/25.jpeg" class="img-fluid" />
+                    <p class="text-center">25</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/26.jpeg" class="img-fluid" />
+                    <p class="text-center">26</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/27.jpeg" class="img-fluid" />
+                    <p class="text-center">27</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/28.jpeg" class="img-fluid" />
+                    <p class="text-center">28</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/29.jpeg" class="img-fluid" />
+                    <p class="text-center">29</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/30.jpeg" class="img-fluid" />
+                    <p class="text-center">30</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/31.jpeg" class="img-fluid" />
+                    <p class="text-center">31</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/32.jpeg" class="img-fluid" />
+                    <p class="text-center">32</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/33.jpeg" class="img-fluid" />
+                    <p class="text-center">33</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/34.jpeg" class="img-fluid" />
+                    <p class="text-center">34</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/35.jpeg" class="img-fluid" />
+                    <p class="text-center">35</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/36.jpeg" class="img-fluid" />
+                    <p class="text-center">36</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 (37–54) -->
+              <div class="carousel-item">
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/37.jpeg" class="img-fluid" />
+                    <p class="text-center">37</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/38.jpeg" class="img-fluid" />
+                    <p class="text-center">38</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/39.jpeg" class="img-fluid" />
+                    <p class="text-center">39</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/40.jpeg" class="img-fluid" />
+                    <p class="text-center">40</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/41.jpeg" class="img-fluid" />
+                    <p class="text-center">41</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/42.jpeg" class="img-fluid" />
+                    <p class="text-center">42</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/43.jpeg" class="img-fluid" />
+                    <p class="text-center">43</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/44.jpeg" class="img-fluid" />
+                    <p class="text-center">44</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/45.jpeg" class="img-fluid" />
+                    <p class="text-center">45</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/46.jpeg" class="img-fluid" />
+                    <p class="text-center">46</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/47.jpeg" class="img-fluid" />
+                    <p class="text-center">47</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/48.jpeg" class="img-fluid" />
+                    <p class="text-center">48</p>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/49.jpeg" class="img-fluid" />
+                    <p class="text-center">49</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/50.jpeg" class="img-fluid" />
+                    <p class="text-center">50</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/51.jpeg" class="img-fluid" />
+                    <p class="text-center">51</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/52.jpeg" class="img-fluid" />
+                    <p class="text-center">52</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/53.jpeg" class="img-fluid" />
+                    <p class="text-center">53</p>
+                  </div>
+                  <div class="col-md-2 d-none d-md-block">
+                    <img src="./orphans/54.jpeg" class="img-fluid" />
+                    <p class="text-center">54</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 (55 only) -->
+              <div class="carousel-item">
+                <div class="row ">
+                  <div class="col-md-2 col-6">
+                    <img src="./orphans/55.jpeg" class="img-fluid" />
+                    <p class="text-center">55</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a
+              class="carousel-control-prev"
+              href="#multiImageCarousel"
+              role="button"
+              data-slide="prev">
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#multiImageCarousel"
+              role="button"
+              data-slide="next">
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
 
@@ -1638,7 +1858,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Number of Children You Wish to Sponsor (select one):</label>
+                  <label>
+                    Number of Children You Wish to Sponsor (select one):
+                  </label>
                   <div class="form-check">
                     <input
                       class="form-check-input"
@@ -1659,7 +1881,7 @@
                       id="csf-children-2"
                       value="2" />
                     <label class="form-check-label" for="csf-children-2">
-                     2
+                      2
                     </label>
                   </div>
                   <div class="form-check">
@@ -1670,7 +1892,7 @@
                       id="csf-children-5"
                       value="5" />
                     <label class="form-check-label" for="csf-children-5">
-                     5
+                      5
                     </label>
                   </div>
                   <div class="form-check">
@@ -1681,7 +1903,7 @@
                       id="csf-children-10"
                       value="10" />
                     <label class="form-check-label" for="csf-children-10">
-                     10
+                      10
                     </label>
                   </div>
                   <div class="form-check form-inline mt-2">
@@ -1692,7 +1914,7 @@
                       id="csf-children-other"
                       value="Other" />
                     <label class="form-check-label" for="csf-children-other">
-                      Other: 
+                      Other:
                     </label>
                     <input
                       type="number"
